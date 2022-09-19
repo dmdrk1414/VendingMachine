@@ -1,0 +1,30 @@
+public class ch3_1 {
+	public static void main(String[] args) {
+//		String name = "박승찬";
+//		int id = 20201822;
+//		double weight = 50.50;
+//		boolean married = true;
+//		String address = "조대정문 자취중";
+
+//		Person person_1 = new Person();
+//		Person person_2 = new Person(name.toCharArray());
+//		Person person_3 = new Person(name.toCharArray(), id, weight, married, address.toCharArray());
+
+//		UI ui = new UI();
+//		System.out.println(ui.inputPerson(person_3));
+
+//		ui.selectMenu("test\n", 3);
+
+		ClassAndObject test = new ClassAndObject();
+//		test.defualConstructor();
+//		System.out.println("");
+
+//		test.constructor();
+//		System.out.println("");
+
+//		test.make_instance();
+		test.run();
+
+	}
+
+}
