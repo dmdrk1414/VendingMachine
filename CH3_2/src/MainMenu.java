@@ -1,8 +1,8 @@
 
 public class MainMenu {
 	public void run() {
-		int menuCount = 2; // 상수 정의
-		String menuStr = "******************************* Main Menu *********************************\n* 0.Exit 1.Class:Object(ch3_1)                                            *\n***************************************************************************\n";
+		int menuCount = 3; // 상수 정의
+		String menuStr = "******************************* Main Menu *********************************\n* 0.Exit 1.CurrentUser(ch3_2)                                             *\n* 2.Class:Object(ch3_1)                                                   *\n***************************************************************************\n";
 
 		UI ui = new UI();
 		while (true) {
@@ -11,10 +11,13 @@ public class MainMenu {
 				break;
 			}
 			switch (menuItem) {
-				case 1:
-					ClassAndObject classandobject = new ClassAndObject();
-					classandobject.run();
-					break;
+			case 1:
+				CurrentUser currentUser = new CurrentUser();
+				currentUser.run();
+			case 2:
+				ClassAndObject classandobject = new ClassAndObject();
+				classandobject.run();
+				break;
 			}
 		}
 		System.out.println("잘가세요~~");

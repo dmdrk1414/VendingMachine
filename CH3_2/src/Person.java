@@ -3,14 +3,12 @@ import java.util.Scanner;
 
 public class Person {
 	private char name[]; // 이름
-	// TODO: 왜 ( )변수에 private를 했을까용? 답 :
 	private int id; // identifier
 	private double weight; // 체중
 	private boolean married;// 결혼 여부
 	private char address[]; // 주소
 
 	public Person() {
-		// TODO: Person(char[] name) 생성자를 완성하라.
 		this.id = 0;
 		this.weight = 0;
 		this.married = false;
@@ -22,7 +20,6 @@ public class Person {
 	}
 
 	public Person(char[] name) {
-		// TODO: Person(char[] name) 생성자를 완성하라.
 		this.id = 0;
 		this.weight = 0;
 		this.married = false;
@@ -36,12 +33,10 @@ public class Person {
 
 	public Person(char[] name, int id, double weight, boolean married, char[] address) {
 		super();
-		// TODO: 멤버변수를 초기화 하라.
 		this.id = id;
 		this.weight = weight;
 		this.married = married;
 
-		// TODO: 여기서 name과 address함수를 set함수로 구현하라.
 		// 왜 set함수로 구현해야되는가 설명하라.
 		this.setName(name);
 		this.setAddress(address);
@@ -58,7 +53,6 @@ public class Person {
 	}
 
 	public void setName(char[] name) {
-		// TODO: setName 함수를 완성하라.
 //		System.arraycopy(name, 0, this.name, 0, name.length); // 일부 복사하기.
 		this.name = name.clone();
 
@@ -94,14 +88,12 @@ public class Person {
 	}
 
 	public void setAddress(char[] address) {
-		// TODO: setAddress를 구현하라
 //		System.arraycopy(address, 0, this.address, 0, address.length); // 일부 복사하기.
 //		this.address = address.clone();
 		this.address = Arrays.copyOf(address, address.length);
 	}
 
 	protected void printMembers() {
-		// TODO: printMembers함수는 멤버변수를 출력하는 것이다. 이쁘게 구현하라.
 		System.out.print(String.valueOf(name) + " " + this.id + " " + this.weight + " " + this.married + " :"
 				+ String.valueOf(this.address) + ":");
 	}
@@ -111,19 +103,60 @@ public class Person {
 	}
 
 	// printMembers 불르는 함수.
-	void print() {
+	public void print() {
 		printMembers();
 	}
 
-	void println() {
+	public void println() {
 		print();
 		System.out.println("");
 	}
 
-	// TODO: printMembers와 비교하기
+	// TODO: 1. whatAreYouDoing 함수 넣기
+	// 박승찬 is taking a java. 출력하기
+	public void whatAreYouDoing() {
+		System.out.println(String.valueOf(this.name) + " is taking a java.");
+	}
+
+	// TODO: 2. isSame 함수 구현
+	// 이름을 비교할것이다 if(this.name.equals(pname) && this.id == pid)
+	public boolean isSame(char[] pname, int pid) {
+		if (this.name.equals(pname) && this.id == pid) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	// TODO: 3. equals 함수 구현
+	// 이름을 비교할것이다 if(this.name.equals(pname) && this.id == pid)
+	// 그냥 맘대로 구현해봐라 비교를 해서 같으면 참이 나오면된다.
+	private boolean equals(char[] pname) {
+		for (int index = 0; index < this.name.length; index++) {
+			if (this.name[index] == pname[index]) {
+				continue;
+			} else {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	// TODO: 4. set 함수를 구현
+	// 이메서드는 set call을하면 각 멤버변수의 set을 call을 해주어서
+	// 각 멤버변수의 값을 할당해주는 메서드이다.
+	public void set(char[] pname, int pid, double pweight, boolean pmarried, char[] paddress) {
+		this.id = pid;
+		this.weight = pweight;
+		this.married = pmarried;
+		this.setName(pname);
+		this.setAddress(paddress);
+	}
+
 	@Override
 	public String toString() {
 		return "Person [name=" + Arrays.toString(name) + ", id=" + id + ", weight=" + weight + ", married=" + married
 				+ ", address=" + Arrays.toString(address) + "]";
 	}
+
 }

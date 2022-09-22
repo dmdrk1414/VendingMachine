@@ -60,7 +60,7 @@ public class Person {
 	public void setName(char[] name) {
 		// TODO: setName 함수를 완성하라.
 //		System.arraycopy(name, 0, this.name, 0, name.length); // 일부 복사하기.
-		this.name = name.clone();
+		this.name = name.clone(); // 깊은 복사
 
 		// https://www.delftstack.com/ko/howto/java/copy-array-java/#java%25EC%2597%2590%25EC%2584%259Carrays.copyof%25EB%25A5%25BC-%25EC%2582%25AC%25EC%259A%25A9%25ED%2595%2598%25EC%2597%25AC-%25EB%258B%25A4%25EB%25A5%25B8-%25EB%25B0%25B0%25EC%2597%25B4%25EC%2597%2590-%25EB%25B3%25B5%25EC%2582%25AC
 	}
@@ -96,7 +96,7 @@ public class Person {
 	public void setAddress(char[] address) {
 		// TODO: setAddress를 구현하라
 //		System.arraycopy(address, 0, this.address, 0, address.length); // 일부 복사하기.
-//		this.address = address.clone();
+//		this.address = address.clone(); // 깊은복사
 		this.address = Arrays.copyOf(address, address.length);
 	}
 

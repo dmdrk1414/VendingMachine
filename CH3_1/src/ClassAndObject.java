@@ -58,7 +58,7 @@ public class ClassAndObject {
 		String menuStr = "+++++++++++ Person Class And Object Menu ++++++++++++\n+ 0.Exit 1.DefualConstructor 2.Constructor          +\n+ 3.Make_instance                                   +\n+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
 //		ClassAndObject target = (ClassAndObject) this.getInstance(new ClassAndObject());                                               make_instance
 		ClassAndObject target = new ClassAndObject();
-		
+
 		UI ui = new UI();
 		while (true) {
 			int menuItem = ui.selectMenu(menuStr, menuCount);
@@ -87,7 +87,6 @@ public class ClassAndObject {
 		} catch (SecurityException e) {
 			e.printStackTrace();
 		}
-
 		return method;
 
 	}
