@@ -14,6 +14,7 @@ public class MainMenu {
 			case 1:
 				CurrentUser currentUser = new CurrentUser();
 				currentUser.run();
+				break;
 			case 2:
 				ClassAndObject classandobject = new ClassAndObject();
 				classandobject.run();

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Person {
+public class Person implements Cloneable {
 	private char name[]; // 이름
 	private int id; // identifier
 	private double weight; // 체중
@@ -157,6 +157,20 @@ public class Person {
 	public String toString() {
 		return "Person [name=" + Arrays.toString(name) + ", id=" + id + ", weight=" + weight + ", married=" + married
 				+ ", address=" + Arrays.toString(address) + "]";
+	}
+
+	// TODO: 5. clone() 함수를 오버라이딩하라.
+	// clone 함수를 오버라이딩함
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// 리턴할 Person객체의 clone을 생성하고
+		Person clone = new Person();
+
+		// Person.set 함수를 사용하여 객체에 할당함.
+		clone.set(this.getName(), this.getId(), this.getWeight(), this.isMarried(), this.getAddress());
+
+		// clone변수를 리턴함.
+		return clone;
 	}
 
 }

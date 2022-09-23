@@ -5,12 +5,16 @@ public class CurrentUser {
 	Person user;
 
 	// 기본 생성자
-	public CurrentUser() { // Menu item 1
+	public CurrentUser() {
 		// TODO: 1. 너의 정보를 적어라. 기본생성자.
 		this.user = new Person("박승찬".toCharArray(), 20161822, 90.50, false, "지산동".toCharArray());
 	}
 
-	void display() {
+	public CurrentUser(Person puser) {
+
+	}
+
+	void display() { // Menu item 1{
 		this.user.println();
 	}
 
@@ -20,9 +24,10 @@ public class CurrentUser {
 	void getter() { // Menu item 2
 		System.out.printf("name:%s id:%d weight:%.2f married:%b address:%s", String.valueOf(user.getName()),
 				user.getId(), user.getWeight(), user.isMarried(), String.valueOf(user.getAddress()));
+		System.out.println();
 	}
 
-	// TODO: 3. set함수를 이용해서 ps의 객체에 정보를 넣어라.
+	// TODO: 3. get/set함수를 이용해서 ps의 객체에 정보를 넣어라.
 	void setter() { // Menu item 3
 		Person ps = new Person("ps".toCharArray());
 		ps.setName(ps.getName());
@@ -74,6 +79,7 @@ public class CurrentUser {
 		} catch (SecurityException e) {
 			e.printStackTrace();
 		}
+
 		if (method == null) {
 			System.out.println("Class: CurrentUser 69번줄 method에 null이 들어갔어요 확인하세요.");
 		}
@@ -81,8 +87,10 @@ public class CurrentUser {
 	}
 
 	public void run() {
+
 		// 함수의 이름을 수기로 작성해서 methodNameArr 배열에 할당
-		String[] methodNameArr = new String[] { "CurrentUser", "getter", "setter", "set", "whatAreYouDoing", "isSame" };
+		String[] methodNameArr = new String[] { "first", "display", "getter", "setter", "set", "whatAreYouDoing",
+				"isSame" };
 		// 가져온 함수를 담는 배열
 		Method[] func_arr = new Method[methodNameArr.length];
 		// CurrentUser클래스를 Class 객체에 선언.
@@ -103,14 +111,16 @@ public class CurrentUser {
 		menuCount = func_arr.length;
 
 		// 화면에 보여 줄 메뉴
-		String menuStr = "+++++++++++++++++++++ Current User Menu ++++++++++++++++++++++++\n+ 0.Logout 1.Display 2.Getter 3.Setter 4.Set 5.WhatAreYouDoing +\n+ 6.IsSame 7.InputPerson                                       +\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+		String menuStr = "+++++++++++++++++++++ Current User Menu ++++++++++++++++++++++++\n+ 0.Logout 1.Display 2.Getter 3.Setter 4.Set 5.WhatAreYouDoing +\n+ 6.IsSame                                                     +\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
 //		ClassAndObject target = (ClassAndObject) this.getInstance(new ClassAndObject());                                               make_instance
-		ClassAndObject target = new ClassAndObject();
+		// target 은 run이 있는 class의 인스턴스를 할당 받은 변수이다.
+		CurrentUser target = new CurrentUser();
 
 		// ui의 인스턴스 할당
 		UI ui = new UI();
 		while (true) {
 			int menuItem = ui.selectMenu(menuStr, menuCount);
+			// 만약에 0을 누르면 리턴이 된다.
 			if (menuItem == 0) {
 				return;
 			}
@@ -128,9 +138,8 @@ public class CurrentUser {
 		}
 	}
 
-	public static void main(String[] args) {
-		CurrentUser currentUser = new CurrentUser();
-		currentUser.run();
-
+	// first함수 메뉴의 크기를 맞춰주기 위한 함수이다.
+	public void first() {
+		System.out.println("여기는 비어있는 함수!!");
 	}
 }

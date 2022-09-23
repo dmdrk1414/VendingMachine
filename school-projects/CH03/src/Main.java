@@ -60,6 +60,7 @@ public class Main {
 				return dArr;
 			} catch (NegativeArraySizeException e) {
 				System.out.println("Input an INTEGER. Try again.");
+				s.nextLine();
 				continue;
 			} catch (InputMismatchException e) {
 				System.out.println("Input an INTEGER. Try again.");
