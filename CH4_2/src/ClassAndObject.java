@@ -2,10 +2,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class ClassAndObject {
-	char[] name_ps1 = "ps1".toCharArray();
-	char[] name_ps2 = "ps2".toCharArray();
-	char[] name_ps3 = "ps3".toCharArray();
-	char[] ps3_address = "ps3 address".toCharArray();
+	String name_ps1 = "ps1";
+	String name_ps2 = "ps2";
+	String name_ps3 = "ps3";
+	String ps3_address = "ps3 address";
 
 	void defualConstructor() { // Menu item 1
 		Person ps = new Person();
@@ -18,18 +18,17 @@ public class ClassAndObject {
 	}
 
 	void make_instance() {// Menu item 3
-		// TODO: 여기서 당신의 정보가 있는 Person() 객체를 생성하기
 //		Person(char[] name, int id, double weight, boolean married, char[] address)
-		Person person = new Person("박승찬".toCharArray(), 20161822, 90, false, "지산동".toCharArray());
+		Person person = new Person("박승찬", 20161822, 90, false, "지산동");
 
-		// TODO: set함수를 이용해서 너의 정보를 객체에 할당하기
-		person.setName("박승찬".toCharArray());
+		// set함수를 이용해서 너의 정보를 객체에 할당하기
+		person.setName("박승찬");
 		person.setId(20161822);
 		person.setWeight(90);
 		person.setMarried(false);
-		person.setAddress("지산동".toCharArray());
+		person.setAddress("지산동");
 
-		// TODO: 너의 정보를 출력해봐
+		// 너의 정보를 출력해봐
 		System.out.println(
 				"name:" + String.valueOf(person.getName()) + " id:" + person.getId() + " weight:" + person.getWeight()
 						+ " married:" + person.isMarried() + " address:" + String.valueOf(person.getAddress()));
@@ -58,10 +57,9 @@ public class ClassAndObject {
 		String menuStr = "+++++++++++ Person Class And Object Menu ++++++++++++\n+ 0.Exit 1.DefualConstructor 2.Constructor          +\n+ 3.Make_instance                                   +\n+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
 //		ClassAndObject target = (ClassAndObject) this.getInstance(new ClassAndObject());                                               make_instance
 		ClassAndObject target = new ClassAndObject();
-8
-		UI ui = new UI();
+
 		while (true) {
-			int menuItem = ui.selectMenu(menuStr, menuCount);
+			int menuItem = UI.selectMenu(menuStr, menuCount);
 			if (menuItem == 0) {
 				return;
 			}
