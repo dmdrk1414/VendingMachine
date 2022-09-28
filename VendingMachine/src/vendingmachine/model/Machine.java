@@ -1,7 +1,15 @@
 package vendingmachine.model;
 
 public class Machine {
-	private String drinkName;
-	private int drinkPrice;
-	private int drinkStock;
+	private String nameDrink;
+	private int priceDrink;
+	private int stockDrink; // stock은 재고를 말한다.
+
+	public void addStockOfDrink(int stockIncrease) {
+		this.stockDrink = this.stockDrink + stockIncrease;
+	}
+
+	public void subtractStockOfDrink(int stockDecrease) {
+		this.stockDrink = this.stockDrink + stockDecrease;
+	}
 }
