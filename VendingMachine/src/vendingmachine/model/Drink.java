@@ -21,11 +21,15 @@ public class Drink {
 	}
 
 	public void addStockOfDrink(int stockIncrease) {
-		this.stockDrink = this.stockDrink + stockIncrease;
+		if (isPositiveNum(stockIncrease)) {
+			this.stockDrink = this.stockDrink + stockIncrease;
+		}
 	}
 
 	public void subtractStockOfDrink(int stockDecrease) {
+		if(isPositiveNum(stockDecrease)) {
 		this.stockDrink = this.stockDrink + stockDecrease;
+		}
 	}
 
 	public boolean isNameDrink(String suppositionName) {
