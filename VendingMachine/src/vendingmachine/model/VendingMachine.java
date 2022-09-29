@@ -7,17 +7,22 @@ public class VendingMachine {
 	private String nameDrink;
 	private int priceDrink;
 	private int stockDrink; // stock은 재고를 말한다.
-	private HashMap<String, Integer> productManagement;
+	private HashMap<Drink> productManagement;
 
 	public VendingMachine() {
-		String[] nameDrinkArr = new String[] { "사이다", "콜라", "환타" };
-		int[] priceDrinkArr = new int[] { 300, 500, 400 };
-		this.productManagement = new HashMap<>();
+//		String[] nameDrinkArr = new String[] { "사이다", "콜라", "환타" };
+//		int[] priceDrinkArr = new int[] { 300, 500, 400 };
+//		this.productManagement = new HashMap<>();
+//
+//		int sizeProductManagement = nameDrinkArr.length;
+//		for (int i = 0; i < sizeProductManagement; i++) {
+//			this.productManagement.put(nameDrinkArr[i], priceDrinkArr[i]);
+//		}
 
-		int sizeProductManagement = nameDrinkArr.length;
-		for (int i = 0; i < sizeProductManagement; i++) {
-			this.productManagement.put(nameDrinkArr[i], priceDrinkArr[i]);
-		}
+		this.productManagement = new HashMap<>();
+		this.productManagement.put(new Drink("사이다", 300, 10));
+		this.productManagement.put(new Drink("콜라", 500, 10));
+		this.productManagement.put(new Drink("환타", 400, 10));
 	}
 
 	public void addStockOfDrink(int stockIncrease) {
