@@ -3,7 +3,7 @@ package vendingmachine.model;
 import java.util.ArrayList;
 
 public class VendingMachine {
-	// 여기는 기계를 만드는 개념이다.
+	private int amountCoin;
 	private ArrayList<Drink> productManagement;
 
 	public VendingMachine() {
@@ -11,5 +11,25 @@ public class VendingMachine {
 		this.productManagement.add(new Drink("사이다", 300, 10));
 		this.productManagement.add(new Drink("콜라", 500, 10));
 		this.productManagement.add(new Drink("환타", 400, 10));
+	}
+
+	public boolean isCoinEmpty() {
+		if (this.amountCoin == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public void addCoin2VendingMachine(int coinInsert) {
+		this.amountCoin = this.amountCoin + coinInsert;
+	}
+
+	public int returnAllAmountCoin() {
+		if (this.amountCoin != 0) {
+			return this.amountCoin;
+		} else {
+			return 0;
+		}
 	}
 }
