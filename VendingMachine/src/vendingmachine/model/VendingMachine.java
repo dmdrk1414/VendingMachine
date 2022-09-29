@@ -11,7 +11,7 @@ public class VendingMachine {
 
 	private int amountCoin;
 	private ArrayList<Drink> productManagement;
-	String namePickDrink;
+	private String namePickDrink;
 
 	public VendingMachine() {
 		this.productManagement = new ArrayList<>();
@@ -81,7 +81,7 @@ public class VendingMachine {
 		try {
 			if (isPickDrinkEmpty(pickNameDrink) && isPositiveNum(priceChange)) {
 				Drink drink = getPickDrink(pickNameDrink);
-				drink.updateInfoDrink(String nameChange, priceCString);
+				drink.updateInfoDrink(nameChange, priceChange);
 				return true;
 			}
 		} catch (NullPointerException e) {
@@ -108,7 +108,7 @@ public class VendingMachine {
 		int pickDrinkIndex = 0;
 		if (isProductManagementValue(pickNameDrink, pickDrinkIndex)) {
 			Drink pickDrink = this.productManagement.get(pickDrinkIndex);
-			return pickDrink.isStockEmpty();
+			return !pickDrink.isStockEmpty();
 		} else {
 			return false;
 		}
@@ -146,10 +146,11 @@ public class VendingMachine {
 
 	public static void main(String[] args) {
 		VendingMachine machine = new VendingMachine();
-		machine.showDrinkList();
-		machine.pickDrinkType("사이다");
-		System.out.println(machine.namePickDrink);
-
+		if (machine.isUpdateDrinkInfo("사이다", "123", 213)) {
+			machine.showDrinkList();
+		} else {
+			System.out.println("sdf");
+		}
 	}
 
 }

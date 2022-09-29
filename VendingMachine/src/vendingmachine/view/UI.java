@@ -16,4 +16,9 @@ public class UI {
 	public static void ErrNotPickStock(String msg) {
 		System.out.println("msg: " + msg + ":: 재고가 없네요.");
 	}
+
+	public static void ErrNotString(String msg) {
+		System.out.println("msg: " + msg + ":: 문자만넣어주세요.");
+
+	}
 }
