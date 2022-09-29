@@ -1,13 +1,17 @@
+import java.util.HashMap;
+import java.util.Iterator;
+
 public class Main {
 
 	public static void main(String args[]) {
-		Main f = new Main();
-		String str = "qweqweasda";
+		HashMap<String, Integer> test = new HashMap<>();
+		test.put("나랑드", 1234);
+		test.put("오렌지", 41234);
+		test.put("사이다", 123);
 
-		if (str.contains(" "))
-			System.out.println("단어가 아님");
-		else
-			System.out.println("문장임");
-
+		Iterator<String> keys = test.keySet().iterator();
+		while (keys.hasNext()) {
+			System.out.println(keys.next());
+		}
 	}
 }
