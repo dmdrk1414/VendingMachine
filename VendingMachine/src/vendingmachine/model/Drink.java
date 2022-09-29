@@ -32,7 +32,7 @@ public class Drink {
 		}
 	}
 
-	public boolean isEmpty() {
+	public boolean isStockEmpty() {
 		if (this.stockDrink == 0) {
 			return true;
 		} else {
