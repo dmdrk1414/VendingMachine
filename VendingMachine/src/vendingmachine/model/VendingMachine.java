@@ -7,6 +7,7 @@ import vendingmachine.view.UI;
 public class VendingMachine {
 	final String MSG_NOT_Pick_Value = "VendingMachine.deletePickDrink";
 	final String MSG_NOT_POSITIVE_INT = "VendingMachine.ErrPositiveCall";
+	final String PRINT_MENU = "음료수 리스트: ";
 
 	private int amountCoin;
 	private ArrayList<Drink> productManagement;
@@ -86,17 +87,16 @@ public class VendingMachine {
 	}
 
 	// 테스트를 위한.
-	public void show() {
-		System.out.println(this.productManagement.size());
+	public void showDrinkList() {
+		System.out.print(PRINT_MENU);
+		for (Drink drink : this.productManagement) {
+			drink.showNameDrink();
+		}
 	}
 
 	public static void main(String[] args) {
 		VendingMachine machine = new VendingMachine();
-		machine.show();
-		machine.deletePickDrink("사이다");
-		machine.show();
-		machine.registerDrink("sdfs", 0, 0);
-		machine.show();
+		machine.showDrinkList();
 	}
 
 }

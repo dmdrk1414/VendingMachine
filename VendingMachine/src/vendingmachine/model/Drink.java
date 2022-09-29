@@ -39,4 +39,9 @@ public class Drink {
 			return false;
 		}
 	}
+
+	public void showNameDrink() {
+		System.out.print(this.nameDrink + " ");
+
+	}
 }
