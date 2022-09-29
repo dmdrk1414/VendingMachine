@@ -11,12 +11,16 @@ public class VendingMachine {
 
 	private int amountCoin;
 	private ArrayList<Drink> productManagement;
+	String namePickDrink;
 
 	public VendingMachine() {
 		this.productManagement = new ArrayList<>();
 		this.productManagement.add(new Drink("사이다", 300, 10));
 		this.productManagement.add(new Drink("콜라", 500, 10));
 		this.productManagement.add(new Drink("환타", 400, 10));
+
+		this.amountCoin = 0;
+		this.namePickDrink = "";
 	}
 
 	public boolean isCoinEmpty() {
@@ -56,12 +60,42 @@ public class VendingMachine {
 		}
 	}
 
-	private boolean isProductManagementValue(String nameDrink2Delete, int deleteIndex) {
+	public void showDrinkList() {
+		System.out.print(PRINT_MENU);
+		for (Drink drink : this.productManagement) {
+			drink.showNameDrink();
+		}
+		System.out.println();
+	}
+
+	public void pickDrinkType(String pickNameDrink) {
+		if (!isPickDrinkEmpty(pickNameDrink)) {
+			this.namePickDrink = pickNameDrink;
+		} else {
+			UI.ErrNotPickStock(pickNameDrink);
+		}
+	}
+
+	private boolean isPickDrinkEmpty(String pickNameDrink) {
+		return isNameDrink(pickNameDrink);
+	}
+
+	private boolean isNameDrink(String pickNameDrink) {
+		int pickDrinkIndex = 0;
+		if (isProductManagementValue(pickNameDrink, pickDrinkIndex)) {
+			Drink pickDrink = this.productManagement.get(pickDrinkIndex);
+			return pickDrink.isStockEmpty();
+		} else {
+			return false;
+		}
+	}
+
+	private boolean isProductManagementValue(String nameDrink2search, int searchIndex) {
 		int endPos = (int) this.productManagement.size();
 		for (int i = 0; i < endPos; i = i + 1) {
 			Drink drink = this.productManagement.get(i);
-			if (drink.isNameDrink(nameDrink2Delete)) {
-				deleteIndex = i;
+			if (drink.isNameDrink(nameDrink2search)) {
+				searchIndex = i;
 				return true;
 			}
 		}
@@ -86,17 +120,12 @@ public class VendingMachine {
 		}
 	}
 
-	// 테스트를 위한.
-	public void showDrinkList() {
-		System.out.print(PRINT_MENU);
-		for (Drink drink : this.productManagement) {
-			drink.showNameDrink();
-		}
-	}
-
 	public static void main(String[] args) {
 		VendingMachine machine = new VendingMachine();
 		machine.showDrinkList();
+		machine.pickDrinkType("사이다");
+		System.out.println(machine.namePickDrink);
+
 	}
 
 }
