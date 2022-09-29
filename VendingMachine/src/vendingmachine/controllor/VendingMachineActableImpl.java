@@ -46,7 +46,7 @@ public class VendingMachineActableImpl implements VendingMachineActable {
 
 	@Override
 	public void pickProduct(VendingMachine vendingMachine, String name2Pick) {
-
+		vendingMachine.pickDrinkType(name2Pick);
 	}
 
 }
