@@ -35,3 +35,10 @@ REAME파일 잘 작성하는법 [README 작성법](https://www.freecodecamp.org/
 - 이 프로젝트는 어떤 문제를 해결하나요? <br>
 - 이 프로젝트를 통해 무엇을 배우셨나요? <br>
 - 이 프로젝트의 특징은 무엇인가요?<br><br>
+
+## 클래스
+
+Machine 클래스 추가 <br>
+
+1. addStockOfDrink : 재고를 증가한다.<br>
+2. subtracktStockOfDrink : 재고를 감소한다.<br>
