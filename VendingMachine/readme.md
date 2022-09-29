@@ -36,12 +36,21 @@ REAME파일 잘 작성하는법 [README 작성법](https://www.freecodecamp.org/
 - 이 프로젝트를 통해 무엇을 배우셨나요? <br>
 - 이 프로젝트의 특징은 무엇인가요?<br><br>
 
-## 클래스
+## 📌 클래스
 
-Machine 클래스 추가 <br>
+VendingMachine 클래스 추가 <br>
 
-1. addStockOfDrink : 재고를 증가한다.<br>
-2. subtracktStockOfDrink : 재고를 감소한다.<br>
+1. productManagement 을 이용한 Drink클래스 관리
+
+Drink 클래스 추가 
+
+1.  nameDrink : 음료수 이름 변수
+2. priceDrink : 음료수 가격 변수
+3. stockDrink : 음료수 재고 변수
+4. addStockOfDrink : 재고 추가하는 메서드
+5. subtractStockOfDrink : 재고 감가 하는 메서드
+6. isNameDrink : 이름이 맞는지 확인하는 메서드
+7. isStockEmpty : 재고가 없는지 확인하는 메서드 
 
 MachineActable 인터페이스 추가
 
@@ -52,3 +61,6 @@ MachineActable 인터페이스 추가
 5. 제품 수정
 6. 메뉴 보기
 7. 메뉴 선택
+
+## 📌 디렉토리 구조
+
