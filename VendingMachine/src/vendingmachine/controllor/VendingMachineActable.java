@@ -1,6 +1,6 @@
 package vendingmachine.controllor;
 
-public interface MachineActable {
+public interface VendingMachineActable {
 	public void inputCoin();
 
 	public void returnCoin();

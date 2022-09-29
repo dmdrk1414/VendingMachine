@@ -1,6 +1,6 @@
 package vendingmachine.model;
 
-public class Machine {
+public class VendingMachine {
 	private String nameDrink;
 	private int priceDrink;
 	private int stockDrink; // stock은 재고를 말한다.
