@@ -11,23 +11,12 @@ public class VendingMachineActableImpl implements VendingMachineActable {
 
 	@Override
 	public void inputCoin(VendingMachine vendingMachine, int CoinCnt) {
-		if (isPositiveNum(CoinCnt)) {
-			vendingMachine.addCoin2VendingMachine(CoinCnt);
-		}
-	}
-
-	private boolean isPositiveNum(int num) {
-		if (num >= 0) {
-			return true;
-		} else {
-			return false;
-		}
+		vendingMachine.addCoin2VendingMachine(CoinCnt);
 	}
 
 	@Override
 	public int returnCoin(VendingMachine vendingMachine) {
 		if (!vendingMachine.isCoinEmpty()) {
-			// TODO: 기계에 돈이 있으면 반환
 			int returnCoin = vendingMachine.returnAllAmountCoin();
 			return returnCoin;
 		} else {
@@ -37,8 +26,7 @@ public class VendingMachineActableImpl implements VendingMachineActable {
 
 	@Override
 	public void registerProduct(VendingMachine vendingMachine, String nameDrink, int priceDrink, int stockDrink) {
-		// TODO: 제품등록
-
+		vendingMachine.registerDrink(nameDrink, priceDrink, priceDrink);
 	}
 
 	@Override
