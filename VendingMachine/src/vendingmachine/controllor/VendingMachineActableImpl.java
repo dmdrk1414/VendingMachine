@@ -37,13 +37,13 @@ public class VendingMachineActableImpl implements VendingMachineActable {
 
 	@Override
 	public void registerProduct(VendingMachine vendingMachine, String nameDrink, int priceDrink, int stockDrink) {
-		// TODO Auto-generated method stub
+		// TODO: 제품등록
 
 	}
 
 	@Override
 	public void deleteProduct(VendingMachine vendingMachine, String nameDrink) {
-		// TODO Auto-generated method stub
+		// TODO: 제품삭제
 
 	}
 

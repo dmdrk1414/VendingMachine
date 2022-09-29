@@ -22,7 +22,9 @@ public class VendingMachine {
 	}
 
 	public void addCoin2VendingMachine(int coinInsert) {
-		this.amountCoin = this.amountCoin + coinInsert;
+		if (isPositiveNum(coinInsert)) {
+			this.amountCoin = this.amountCoin + coinInsert;
+		}
 	}
 
 	public int returnAllAmountCoin() {
@@ -32,4 +34,28 @@ public class VendingMachine {
 			return 0;
 		}
 	}
+
+	public void registerDrink(String nameDrink, int priceDrink, int stockDrink) {
+		if (strCheck(nameDrink) && isPositiveNum(priceDrink) && isPositiveNum(stockDrink)) {
+			this.productManagement.add(new Drink(nameDrink, priceDrink, stockDrink));
+		}
+	}
+
+	private boolean isPositiveNum(int num) {
+		if (num >= 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public static boolean strCheck(String inputString) {
+		try {
+			double a = Integer.parseInt(inputString);
+			return false;
+		} catch (Exception e) {
+			return true;
+		}
+	}
+
 }
