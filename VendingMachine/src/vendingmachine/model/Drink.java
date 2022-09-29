@@ -54,7 +54,6 @@ public class Drink {
 			this.nameDrink = nameChange;
 			this.priceDrink = priceChange;
 		}
-
 	}
 
 	private boolean isPositiveNum(int num) {

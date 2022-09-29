@@ -77,7 +77,6 @@ public class VendingMachine {
 	}
 
 	public boolean isUpdateDrinkInfo(String pickNameDrink, String nameChange, int priceChange) {
-
 		try {
 			if (isPickDrinkEmpty(pickNameDrink) && isPositiveNum(priceChange)) {
 				Drink drink = getPickDrink(pickNameDrink);
@@ -143,14 +142,4 @@ public class VendingMachine {
 			return true;
 		}
 	}
-
-	public static void main(String[] args) {
-		VendingMachine machine = new VendingMachine();
-		if (machine.isUpdateDrinkInfo("사이다", "123", 213)) {
-			machine.showDrinkList();
-		} else {
-			System.out.println("sdf");
-		}
-	}
-
 }

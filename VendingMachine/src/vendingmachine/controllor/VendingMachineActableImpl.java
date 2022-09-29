@@ -3,13 +3,6 @@ package vendingmachine.controllor;
 import vendingmachine.model.VendingMachine;
 
 public class VendingMachineActableImpl implements VendingMachineActable {
-
-//	public static void main(String[] args) {
-//		VendingMachineActableImpl test = new VendingMachineActableImpl();
-//		VendingMachine e = new VendingMachine();
-//
-//	}
-
 	@Override
 	public void inputCoin(VendingMachine vendingMachine, int CoinCnt) {
 		vendingMachine.addCoin2VendingMachine(CoinCnt);
@@ -37,7 +30,8 @@ public class VendingMachineActableImpl implements VendingMachineActable {
 
 	@Override
 	public void reviseProduct(VendingMachine vendingMachine, String nameDrink, String name2Change, int price2Change) {
-		// TODO Auto-generated method stub
+		if (vendingMachine.isUpdateDrinkInfo(nameDrink, name2Change, price2Change)) {
+		}
 	}
 
 	@Override
