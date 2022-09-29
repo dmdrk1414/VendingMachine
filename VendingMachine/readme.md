@@ -42,3 +42,13 @@ Machine 클래스 추가 <br>
 
 1. addStockOfDrink : 재고를 증가한다.<br>
 2. subtracktStockOfDrink : 재고를 감소한다.<br>
+
+MachineActable 인터페이스 추가
+
+1. 동전을 넣는다.
+2. 잔돈을 반환
+3. 제품 등록
+4. 제품 삭제
+5. 제품 수정
+6. 메뉴 보기
+7. 메뉴 선택
