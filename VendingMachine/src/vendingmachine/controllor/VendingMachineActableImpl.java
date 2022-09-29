@@ -3,6 +3,7 @@ package vendingmachine.controllor;
 import vendingmachine.model.VendingMachine;
 
 public class VendingMachineActableImpl implements VendingMachineActable {
+
 //	public static void main(String[] args) {
 //		VendingMachineActableImpl test = new VendingMachineActableImpl();
 //		VendingMachine e = new VendingMachine();

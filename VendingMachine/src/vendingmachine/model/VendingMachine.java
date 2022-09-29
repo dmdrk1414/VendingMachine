@@ -76,6 +76,30 @@ public class VendingMachine {
 		}
 	}
 
+	public boolean isUpdateDrinkInfo(String pickNameDrink, String nameChange, int priceChange) {
+
+		try {
+			if (isPickDrinkEmpty(pickNameDrink) && isPositiveNum(priceChange)) {
+				Drink drink = getPickDrink(pickNameDrink);
+				drink.updateInfoDrink(String nameChange, priceCString);
+				return true;
+			}
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+		}
+		return false;
+
+	}
+
+	private Drink getPickDrink(String pickNameDrink) throws NullPointerException {
+		int pickDrinkIndex = 0;
+		if (isProductManagementValue(pickNameDrink, pickDrinkIndex)) {
+			Drink drink = this.productManagement.get(pickDrinkIndex);
+			return drink;
+		}
+		return null;
+	}
+
 	private boolean isPickDrinkEmpty(String pickNameDrink) {
 		return isNameDrink(pickNameDrink);
 	}
