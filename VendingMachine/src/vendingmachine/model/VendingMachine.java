@@ -2,7 +2,12 @@ package vendingmachine.model;
 
 import java.util.ArrayList;
 
+import vendingmachine.view.UI;
+
 public class VendingMachine {
+	final String MSG_NOT_Pick_Value = "VendingMachine.deletePickDrink";
+	final String MSG_NOT_POSITIVE_INT = "VendingMachine.ErrPositiveCall";
+
 	private int amountCoin;
 	private ArrayList<Drink> productManagement;
 
@@ -46,7 +51,7 @@ public class VendingMachine {
 		if (isProductManagementValue(nameDrink2Delete, deleteIndex)) {
 			this.productManagement.remove(deleteIndex);
 		} else {
-			// TODO: 없다고 메시지를 보내라.
+			UI.ErrNotPickValue(MSG_NOT_Pick_Value);
 		}
 	}
 
@@ -66,7 +71,7 @@ public class VendingMachine {
 		if (num >= 0) {
 			return true;
 		} else {
-			// TODO: 양수입렵의 메시지를 보내라
+			UI.ErrPositiveCall(MSG_NOT_POSITIVE_INT);
 			return false;
 		}
 	}
@@ -89,6 +94,8 @@ public class VendingMachine {
 		VendingMachine machine = new VendingMachine();
 		machine.show();
 		machine.deletePickDrink("사이다");
+		machine.show();
+		machine.registerDrink("sdfs", 0, 0);
 		machine.show();
 	}
 
