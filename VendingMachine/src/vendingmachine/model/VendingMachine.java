@@ -41,21 +41,55 @@ public class VendingMachine {
 		}
 	}
 
+	public void deletePickDrink(String nameDrink2Delete) {
+		int deleteIndex = 0;
+		if (isProductManagementValue(nameDrink2Delete, deleteIndex)) {
+			this.productManagement.remove(deleteIndex);
+		} else {
+			// TODO: 없다고 메시지를 보내라.
+		}
+	}
+
+	private boolean isProductManagementValue(String nameDrink2Delete, int deleteIndex) {
+		int endPos = (int) this.productManagement.size();
+		for (int i = 0; i < endPos; i = i + 1) {
+			Drink drink = this.productManagement.get(i);
+			if (drink.isNameDrink(nameDrink2Delete)) {
+				deleteIndex = i;
+				return true;
+			}
+		}
+		return false;
+	}
+
 	private boolean isPositiveNum(int num) {
 		if (num >= 0) {
 			return true;
 		} else {
+			// TODO: 양수입렵의 메시지를 보내라
 			return false;
 		}
 	}
 
-	public static boolean strCheck(String inputString) {
+	public boolean strCheck(String inputString) {
 		try {
 			double a = Integer.parseInt(inputString);
 			return false;
 		} catch (Exception e) {
 			return true;
 		}
+	}
+
+	// 테스트를 위한.
+	public void show() {
+		System.out.println(this.productManagement.size());
+	}
+
+	public static void main(String[] args) {
+		VendingMachine machine = new VendingMachine();
+		machine.show();
+		machine.deletePickDrink("사이다");
+		machine.show();
 	}
 
 }
