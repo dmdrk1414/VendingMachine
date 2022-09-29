@@ -36,23 +36,47 @@ REAME파일 잘 작성하는법 [README 작성법](https://www.freecodecamp.org/
 - 이 프로젝트를 통해 무엇을 배우셨나요? <br>
 - 이 프로젝트의 특징은 무엇인가요?<br><br>
 
-## 📌 클래스
+## 📌 클래스 메서드 추가 설명
 
-VendingMachine 클래스 추가 <br>
+#### VendingMachine 클래스 추가 <br>
 
-1. productManagement 을 이용한 Drink클래스 관리
+1.  amountCoin : 자판기가 가지고있는 총 코인 갯수 변수
+2.  productManagement 을 이용한 Drink클래스 관리
+3.  namePickDrink 을 이용해 골라진 음료수 얻는다.
+4.  isCoinEmpty : 코인이 있는지 empty인지 확인하는 메서드
+5.  addCoin2VendingMachine : 코인을 추가하는 메서드
+6.  returnAllAmountCoin : 코인을 반환하는 메서드
+7.  registerDrink : 제품등록 메서드
+8.  deletePickDrink : 제품 삭제 메서드
+9.  showDrinkList : 제품 확인 프린트 메서드 (추후 삭제할듯...)
+10.  pickDrinkType : 선택한 음료수를 this.namePickDrink변수에 저장
+11.  isUpdateDrinkInfo : Drink 데이터 업데이트 메서드
+12.  getPickDrink : 선택한 음료이름을 이용해 Drink 객체를 얻는다.
+13.  isPickDrinkEmpty : 선택한 음료가 비어있으면 true 메서드
+14.  isNameDrink : 이름이 있는지 확인 하는 메서드 ( 추후 수정할듯 : 선택한 음료의Drink의 재고가 비었는지? 로됨. 방법을 아직모르겠음.)
+15.  isProductManagementValue:  제품 메니저변수에서 값이 있는지 확인하는 메서드, 찾은후 index 반환( 추후 수정할듯. 메니저에서 값이 있는지 확인하는 지? 아직 굳이 필요한지 고민)
+16.  isPositiveNum : 양수확인 메서드
+17.  strCheck : 문자열 체크
 
-Drink 클래스 추가 
+#### Drink 클래스 추가
 
-1.  nameDrink : 음료수 이름 변수
-2. priceDrink : 음료수 가격 변수
-3. stockDrink : 음료수 재고 변수
-4. addStockOfDrink : 재고 추가하는 메서드
-5. subtractStockOfDrink : 재고 감가 하는 메서드
-6. isNameDrink : 이름이 맞는지 확인하는 메서드
-7. isStockEmpty : 재고가 없는지 확인하는 메서드 
+1. nameDrink, priceDrink, stockDrink 변수 추가 : 음료수의 정보
+2. addStockOfDrink, subtractStockOfDrink : 재고 관리 메서드 
+3. isNameDrink : 추측한 이름과 음료의 이름이 같은지 확인 (getter 이용안하기) 메서드
+4. isStockEmpty : 재고가 empty면 return true 메서드
+5. showNameDrink : 제품 이름 프린트 메서드
+6. updateInfoDrink : 음료 info 업데이트 메서드
+7. isPositiveNum : 양수인지 체크 메서드
+8. strCheck: 문자열인지 체크 메서드
 
-MachineActable 인터페이스 추가
+#### UI 클래스 추가
+
+1. ErrPositiveCall : 양수를 입력해주세요.
+2. ErrNotPickValue : 찾고자하는 것이 없습니다.
+3. ErrNotPickStock : 재고가 없네요.
+4. ErrNotString : 문자만넣어주세요.
+
+#### VendingMachineActable 인터페이스 추가
 
 1. 동전을 넣는다.
 2. 잔돈을 반환
@@ -61,6 +85,24 @@ MachineActable 인터페이스 추가
 5. 제품 수정
 6. 메뉴 보기
 7. 메뉴 선택
+
+#### VendingMachineActableImpl 클래스 추가
+
+1. inputCoin : 코인 추가
+2. returnCoin : 동전 반환
+3. registerProduct : 제품 등록
+4. deleteProduct : 제품 삭제
+5. reviseProduct : 제품 업데이트
+6. showProducts : 제품 보여주기
+7. pickProduct : 제품 선택
+
+
+
+## 😍일기😍
+
+### 0929 
+
+오늘은 자판기를 프로그래밍을 하였습니다. 메시지를 보내라, 변수명, 함수, 클래스 독립성, 함수 15줄이내 및 한가지 기능만 구현, 참 힘들다는 것을 느겼습니다. 모호한 개념들이 정리되는 기분이라 참 좋내요,  run함수를 한번 만들어서 view 함수를 만들어 봐야겠어요.
 
 ## 📌 디렉토리 구조
 
