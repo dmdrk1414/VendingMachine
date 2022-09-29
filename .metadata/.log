@@ -4061,3 +4061,6 @@ org.eclipse.core.commands.NotEnabledException: Trying to execute the disabled co
 
 !ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-09-29 12:52:27.651
 !MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-09-29 12:59:14.628
+!MESSAGE No .vrapperrc or _vrapperrc found.
