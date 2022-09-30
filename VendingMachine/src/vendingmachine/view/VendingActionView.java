@@ -17,6 +17,6 @@ public class VendingActionView {
 
 	public void putInVendingMachineCoin() {
 
-		int coinGiveUser = this.user.subtractCoinCnt(0);
+//		int coinGiveUser = this.user.subtractCoinCnt(0);
 	}
 }

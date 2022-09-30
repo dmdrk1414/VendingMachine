@@ -72,4 +72,20 @@ public class UI {
 			return true;
 		}
 	}
+
+	public static int getInt() {
+		Scanner sc = new Scanner(System.in);
+		int selectNum = 0;
+
+		selectNum = sc.nextInt();
+		if (UI.isPositiveNum(selectNum)) {
+			return selectNum;
+		} else {
+			return -1;
+		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println(UI.getInt());
+	}
 }
