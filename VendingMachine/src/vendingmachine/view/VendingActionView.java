@@ -63,15 +63,14 @@ public class VendingActionView {
 		this.machineAction.showProducts(this.machine);
 	}
 
-	public void chooseDrink2VendingMachine() {
+	public void chooseDrink2VendingMachine() { // menu 7.제품선택
 		System.out.print("선택할 음료수 이름: ");
 		String nameDrinkPick = UI.getStrWord();
 		this.machineAction.pickProduct(this.machine, nameDrinkPick);
-		System.out.println(this.machine.getnamePickDrink());
 	}
 
-	public static void main(String[] args) {
-		VendingActionView view = new VendingActionView();
+//	public static void main(String[] args) {
+//		VendingActionView view = new VendingActionView();
 //		view.putInVendingMachineCoin(); // 돈넣기
 //		view.returnCoin2VendingMachine(); // 돈반환
 
@@ -88,7 +87,7 @@ public class VendingActionView {
 //		view.updateDrinkInfo2VendingMachine();
 //		view.showDrinks2user(); // 음료수 보여주기.
 
-		view.showDrinks2user(); // 음료수 보여주기.
-		view.chooseDrink2VendingMachine();
-	}
+//		view.showDrinks2user(); // 음료수 보여주기.
+//		view.chooseDrink2VendingMachine();
+//	}
 }
