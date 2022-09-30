@@ -46,6 +46,7 @@ public class VendingMachine {
 	}
 
 	public void registerDrink(String nameDrink, int priceDrink, int stockDrink) {
+		// TODO: registerDrink 같은 이름이 있는지 확인을 해야됨. 추가.
 		if (UI.isStrCheck(nameDrink) && UI.isPositiveNum(priceDrink) && UI.isPositiveNum(stockDrink)) {
 			this.productManagement.add(new Drink(nameDrink, priceDrink, stockDrink));
 		}

@@ -18,10 +18,10 @@ public class MainMenu {
 				return;
 			}
 			switch (selectMenuCount) {
-			case 1: // menu 1.동전넣기
+			case 1: // menu 1.동전넣기 /
 
 				break;
-			case 2: // menu 2.동전반환
+			case 2: // menu 2.동전반환 /
 
 				break;
 			case 3: // menu 3.제품등록
@@ -33,7 +33,7 @@ public class MainMenu {
 			case 5: // menu 5.제품업데이트
 
 				break;
-			case 6: // menu 6.제품보기
+			case 6: // menu 6.제품보기 /
 
 				break;
 			case 7: // menu 7.제품선택
