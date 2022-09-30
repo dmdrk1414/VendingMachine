@@ -7,7 +7,7 @@ public class MainMenu {
 	public void run() {
 
 		int manuCounter = MANU_COUNTER_NUMBER;
-
+		int selctMenuCount = UI.returnSelectMenuNum();
 		while (true) {
 			// TODO:
 //			int menuItem = 3

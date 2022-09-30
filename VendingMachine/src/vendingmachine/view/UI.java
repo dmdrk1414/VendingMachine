@@ -3,7 +3,7 @@ package vendingmachine.view;
 import java.util.Scanner;
 
 public class UI {
-	final static String UI_IS_POSITIVE_NUM = "UI.isPositiveNum";
+	final static private String UI_IS_POSITIVE_NUM = "UI.isPositiveNum";
 
 	private UI() {
 
@@ -33,15 +33,12 @@ public class UI {
 		Scanner sc = new Scanner(System.in);
 		int selectNum = 0;
 
-		if (sc.hasNextInt()) {
-			selectNum = sc.nextInt();
-			if (isPositiveNum(selectNum)) {
-				return selectNum;
-			}
+		selectNum = sc.nextInt();
+		if (isPositiveNum(selectNum)) {
+			return selectNum;
+		} else {
+			return -1;
 		}
-
-		UI.ErrNotFormReturn(UI_IS_POSITIVE_NUM);
-		return -1;
 	}
 
 	private static boolean isPositiveNum(int selectNum) {
@@ -51,5 +48,9 @@ public class UI {
 			UI.ErrPositiveCall("");
 			return false;
 		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println(UI.returnSelectMenuNum());
 	}
 }
