@@ -24,7 +24,7 @@ public class MainMenu {
 			case 2: // menu 2.동전반환 /
 
 				break;
-			case 3: // menu 3.제품등록
+			case 3: // menu 3.제품등록 /
 
 				break;
 			case 4: // menu 4.제품삭제

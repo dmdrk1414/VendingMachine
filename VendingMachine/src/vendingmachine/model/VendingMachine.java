@@ -7,6 +7,7 @@ import vendingmachine.view.UI;
 public class VendingMachine {
 	final private String PRINT_MENU = "음료수 리스트: ";
 
+	private static int index;
 	private int amountCoin;
 	private ArrayList<Drink> productManagement;
 	private String namePickDrink;
@@ -53,8 +54,8 @@ public class VendingMachine {
 	}
 
 	public void deletePickDrink(String nameDrink2Delete) {
-		int deleteIndex = 0;
-		if (isProductManagementValue(nameDrink2Delete, deleteIndex)) {
+		if (isProductManagementValue(nameDrink2Delete)) {
+			int deleteIndex = VendingMachine.index;
 			this.productManagement.remove(deleteIndex);
 		} else {
 			UI.ErrNotPickValue("");
@@ -92,8 +93,8 @@ public class VendingMachine {
 	}
 
 	private Drink getPickDrink(String pickNameDrink) throws NullPointerException {
-		int pickDrinkIndex = 0;
-		if (isProductManagementValue(pickNameDrink, pickDrinkIndex)) {
+		if (isProductManagementValue(pickNameDrink)) {
+			int pickDrinkIndex = VendingMachine.index;
 			Drink drink = this.productManagement.get(pickDrinkIndex);
 			return drink;
 		}
@@ -105,8 +106,8 @@ public class VendingMachine {
 	}
 
 	private boolean isNameDrink(String pickNameDrink) {
-		int pickDrinkIndex = 0;
-		if (isProductManagementValue(pickNameDrink, pickDrinkIndex)) {
+		if (isProductManagementValue(pickNameDrink)) {
+			int pickDrinkIndex = VendingMachine.index;
 			Drink pickDrink = this.productManagement.get(pickDrinkIndex);
 			return !pickDrink.isStockEmpty();
 		} else {
@@ -114,12 +115,12 @@ public class VendingMachine {
 		}
 	}
 
-	private boolean isProductManagementValue(String nameDrink2search, int searchIndex) {
+	private boolean isProductManagementValue(String nameDrink2search) {
 		int endPos = (int) this.productManagement.size();
 		for (int i = 0; i < endPos; i = i + 1) {
 			Drink drink = this.productManagement.get(i);
 			if (drink.isNameDrink(nameDrink2search)) {
-				searchIndex = i;
+				VendingMachine.index = i;
 				return true;
 			}
 		}

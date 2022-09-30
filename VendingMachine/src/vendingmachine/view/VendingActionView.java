@@ -45,19 +45,32 @@ public class VendingActionView {
 		machineAction.registerProduct(this.machine, nameNewDrink, priceNewDrink, stockNewDrink);
 	}
 
+	public void deleteExistDrink2VendingMachine() {
+		System.out.print("제거하고싶은 음료수를 고르세요: ");
+		String pickNameDrink = UI.getStrWord();
+		// TODO
+//		String pickNameDrink = "환타";
+//		System.out.println();
+		this.machine.deletePickDrink(pickNameDrink);
+	}
+
 	public void showDrinks2user() { // menu 6.
 		machineAction.showProducts(this.machine);
 	}
 
 	public static void main(String[] args) {
 		VendingActionView view = new VendingActionView();
-		view.putInVendingMachineCoin(); // 돈넣기
-		view.returnCoin2VendingMachine(); // 돈반환
-		view.putInVendingMachineCoin(); // 돈넣기
+//		view.putInVendingMachineCoin(); // 돈넣기
+//		view.returnCoin2VendingMachine(); // 돈반환
+//		view.putInVendingMachineCoin(); // 돈넣기
+//		view.showDrinks2user(); // 음료수 보여주기.
+//		view.returnCoin2VendingMachine(); // 돈반환
+		view.showDrinks2user();
+//		view.registerNewDrink();
+//		view.showDrinks2user();
+		view.deleteExistDrink2VendingMachine();
 		view.showDrinks2user(); // 음료수 보여주기.
-		view.returnCoin2VendingMachine(); // 돈반환
-		view.showDrinks2user();
-		view.registerNewDrink();
-		view.showDrinks2user();
+//		view.deleteExistDrink2VendingMachine();
+//		view.showDrinks2user(); // 음료수 보여주기
 	}
 }

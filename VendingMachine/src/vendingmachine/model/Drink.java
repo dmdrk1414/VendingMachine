@@ -14,6 +14,10 @@ public class Drink {
 		System.out.println("Drink에 이름, 가격, 재고현황을 추가해줘");
 	}
 
+	public String getName() {
+		return this.nameDrink;
+	}
+
 	public Drink(String nameDrink, int priceDrink, int stockDrink) {
 		this.nameDrink = nameDrink;
 		this.priceDrink = priceDrink;
