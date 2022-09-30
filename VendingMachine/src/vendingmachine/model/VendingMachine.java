@@ -109,7 +109,7 @@ public class VendingMachine {
 		if (isProductManagementValue(pickNameDrink)) {
 			int pickDrinkIndex = VendingMachine.index;
 			Drink pickDrink = this.productManagement.get(pickDrinkIndex);
-			return !pickDrink.isStockEmpty();
+			return pickDrink.isNameDrink(pickNameDrink);
 		} else {
 			return false;
 		}
