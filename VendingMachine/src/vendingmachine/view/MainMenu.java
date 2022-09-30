@@ -27,10 +27,10 @@ public class MainMenu {
 			case 3: // menu 3.제품등록 /
 
 				break;
-			case 4: // menu 4.제품삭제
+			case 4: // menu 4.제품삭제 /
 
 				break;
-			case 5: // menu 5.제품업데이트
+			case 5: // menu 5.제품업데이트 /
 
 				break;
 			case 6: // menu 6.제품보기 /

@@ -105,7 +105,13 @@ public class VendingMachine {
 	}
 
 	private boolean isPickDrinkEmpty(String pickNameDrink) {
-		return isNameDrink2VendingMachine(pickNameDrink);
+		if (isProductManagementValue(pickNameDrink)) {
+			int pickDrinkIndex = VendingMachine.index;
+			Drink pickDrink = this.productManagement.get(pickDrinkIndex);
+			return pickDrink.isStockEmpty();
+		} else {
+			return false;
+		}
 	}
 
 	// 이름인가 ? true

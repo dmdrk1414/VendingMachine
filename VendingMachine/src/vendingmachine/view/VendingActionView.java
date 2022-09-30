@@ -15,7 +15,7 @@ public class VendingActionView {
 		this.machineAction = new VendingMachineActableImpl();
 	}
 
-	public void putInVendingMachineCoin() { // menu 1.
+	public void putInVendingMachineCoin() { // menu 1.동전넣기
 		System.out.print("투입할 돈: ");
 		int coinGiveUser = UI.getInt();
 		if (user.subtractCoinCnt(coinGiveUser)) {
@@ -24,14 +24,14 @@ public class VendingActionView {
 		}
 	}
 
-	public void returnCoin2VendingMachine() { // menu 2.
+	public void returnCoin2VendingMachine() { // menu 2.동전반환
 		int CoinsReturn = machineAction.returnCoin(this.machine);
 		if (user.addCoinCnt(CoinsReturn)) {
 			System.out.println("자판기의 모든 돈을 반환합니다.!!!");
 		}
 	}
 
-	public void registerNewDrink() { // menu 3.
+	public void registerNewDrink() { // menu 3.제품등록
 		System.out.println("제품을 추가합니다. (이름 가격 재고)을 적어주세요.");
 		System.out.print("음료수 이름: ");
 		String nameNewDrink = UI.getStrWord();
@@ -43,29 +43,52 @@ public class VendingActionView {
 		machineAction.registerProduct(this.machine, nameNewDrink, priceNewDrink, stockNewDrink);
 	}
 
-	public void deleteExistDrink2VendingMachine() {
+	public void deleteExistDrink2VendingMachine() { // menu 4.제품삭제
 		System.out.print("제거하고싶은 음료수를 고르세요: ");
 		String pickNameDrink = UI.getStrWord();
-		this.machine.deletePickDrink(pickNameDrink);
+		this.machineAction.deleteProduct(machine, pickNameDrink);
 	}
 
-	public void showDrinks2user() { // menu 6.
-		machineAction.showProducts(this.machine);
+	public void updateDrinkInfo2VendingMachine() { // menu 5.제품업데이트
+		System.out.print("선택할 음료수 이름: ");
+		String nameDrinkPick = UI.getStrWord();
+		System.out.print("수정할 음료수 이름: ");
+		String nameDrink2Change = UI.getStrWord();
+		System.out.print("수정할 음료수 가격: ");
+		int priceDrink2Change = UI.getInt();
+		this.machineAction.reviseProduct(machine, nameDrinkPick, nameDrink2Change, priceDrink2Change);
+	}
+
+	public void showDrinks2user() { // menu 6.제품보기
+		this.machineAction.showProducts(this.machine);
+	}
+
+	public void chooseDrink2VendingMachine() {
+		System.out.print("선택할 음료수 이름: ");
+		String nameDrinkPick = UI.getStrWord();
+		this.machineAction.pickProduct(this.machine, nameDrinkPick);
+		System.out.println(this.machine.getnamePickDrink());
 	}
 
 	public static void main(String[] args) {
 		VendingActionView view = new VendingActionView();
 //		view.putInVendingMachineCoin(); // 돈넣기
 //		view.returnCoin2VendingMachine(); // 돈반환
-//		view.putInVendingMachineCoin(); // 돈넣기
+
 //		view.showDrinks2user(); // 음료수 보여주기.
 //		view.returnCoin2VendingMachine(); // 돈반환
-		view.showDrinks2user();
-		view.registerNewDrink();
+
+//		view.registerNewDrink();
 //		view.showDrinks2user();
+
 //		view.deleteExistDrink2VendingMachine();
+//		view.showDrinks2user(); // 음료수 보여주기.
+
+//		view.showDrinks2user(); // 음료수 보여주기.
+//		view.updateDrinkInfo2VendingMachine();
+//		view.showDrinks2user(); // 음료수 보여주기.
+
 		view.showDrinks2user(); // 음료수 보여주기.
-//		view.deleteExistDrink2VendingMachine();
-//		view.showDrinks2user(); // 음료수 보여주기
+		view.chooseDrink2VendingMachine();
 	}
 }
