@@ -9,15 +9,21 @@ public class Person {
 		this.coin = 2000;
 	}
 
-	public void addCoinCnt(int coin2Add) {
+	public boolean addCoinCnt(int coin2Add) {
 		if (UI.isPositiveNum(coin2Add)) {
 			this.coin = this.coin + coin2Add;
+			return true;
+		} else {
+			return false;
 		}
 	}
 
-	public void subtractCoinCnt(int coin2Add) {
+	public boolean subtractCoinCnt(int coin2Add) {
 		if (UI.isPositiveNum(coin2Add)) {
 			this.coin = this.coin - coin2Add;
+			return true;
+		} else {
+			return false;
 		}
 	}
 }
