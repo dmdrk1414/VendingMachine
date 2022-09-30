@@ -23,12 +23,16 @@ public class Drink {
 	public void addStockOfDrink(int stockIncrease) {
 		if (isPositiveNum(stockIncrease)) {
 			this.stockDrink = this.stockDrink + stockIncrease;
+		} else {
+			UI.ErrPositiveCall("");
 		}
 	}
 
 	public void subtractStockOfDrink(int stockDecrease) {
-		if(isPositiveNum(stockDecrease)) {
-		this.stockDrink = this.stockDrink + stockDecrease;
+		if (isPositiveNum(stockDecrease)) {
+			this.stockDrink = this.stockDrink + stockDecrease;
+		} else {
+			UI.ErrPositiveCall("");
 		}
 	}
 
