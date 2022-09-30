@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import vendingmachine.view.UI;
 
 public class VendingMachine {
-	final private String MSG_NOT_Pick_Value = "VendingMachine.deletePickDrink";
-	final private String MSG_NOT_POSITIVE_INT = "VendingMachine.ErrPositiveCall";
 	final private String PRINT_MENU = "음료수 리스트: ";
 
 	private int amountCoin;
@@ -32,7 +30,7 @@ public class VendingMachine {
 	}
 
 	public void addCoin2VendingMachine(int coinInsert) {
-		if (isPositiveNum(coinInsert)) {
+		if (UI.isPositiveNum(coinInsert)) {
 			this.amountCoin = this.amountCoin + coinInsert;
 		}
 	}
@@ -46,7 +44,7 @@ public class VendingMachine {
 	}
 
 	public void registerDrink(String nameDrink, int priceDrink, int stockDrink) {
-		if (strCheck(nameDrink) && isPositiveNum(priceDrink) && isPositiveNum(stockDrink)) {
+		if (UI.isStrCheck(nameDrink) && UI.isPositiveNum(priceDrink) && UI.isPositiveNum(stockDrink)) {
 			this.productManagement.add(new Drink(nameDrink, priceDrink, stockDrink));
 		}
 	}
@@ -56,13 +54,13 @@ public class VendingMachine {
 		if (isProductManagementValue(nameDrink2Delete, deleteIndex)) {
 			this.productManagement.remove(deleteIndex);
 		} else {
-			UI.ErrNotPickValue(MSG_NOT_Pick_Value);
+			UI.ErrNotPickValue("");
 		}
 	}
 
 	public boolean isUpdateDrinkInfo(String pickNameDrink, String nameChange, int priceChange) {
 		try {
-			if (isPickDrinkEmpty(pickNameDrink) && isPositiveNum(priceChange)) {
+			if (isPickDrinkEmpty(pickNameDrink) && UI.isPositiveNum(priceChange)) {
 				Drink drink = getPickDrink(pickNameDrink);
 				drink.updateInfoDrink(nameChange, priceChange);
 				return true;
@@ -123,23 +121,5 @@ public class VendingMachine {
 			}
 		}
 		return false;
-	}
-
-	private boolean isPositiveNum(int num) {
-		if (num >= 0) {
-			return true;
-		} else {
-			UI.ErrPositiveCall(MSG_NOT_POSITIVE_INT);
-			return false;
-		}
-	}
-
-	public boolean strCheck(String inputString) {
-		try {
-			double a = Integer.parseInt(inputString);
-			return false;
-		} catch (Exception e) {
-			return true;
-		}
 	}
 }

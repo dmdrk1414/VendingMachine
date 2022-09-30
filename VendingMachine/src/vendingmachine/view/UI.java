@@ -54,7 +54,7 @@ public class UI {
 		}
 	}
 
-	private static boolean isPositiveNum(int numCheck) {
+	public static boolean isPositiveNum(int numCheck) {
 		if (numCheck >= 0) {
 			return true;
 		} else {
@@ -63,7 +63,13 @@ public class UI {
 		}
 	}
 
-	public static void main(String[] args) {
-		System.out.println(UI.returnSelectMenuNum(6));
+	public static boolean isStrCheck(String inputString) {
+		try {
+			double a = Integer.parseInt(inputString);
+			UI.ErrNotString("");
+			return false;
+		} catch (Exception e) {
+			return true;
+		}
 	}
 }

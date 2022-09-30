@@ -21,7 +21,7 @@ public class Drink {
 	}
 
 	public void addStockOfDrink(int stockIncrease) {
-		if (isPositiveNum(stockIncrease)) {
+		if (UI.isPositiveNum(stockIncrease)) {
 			this.stockDrink = this.stockDrink + stockIncrease;
 		} else {
 			UI.ErrPositiveCall("");
@@ -29,7 +29,7 @@ public class Drink {
 	}
 
 	public void subtractStockOfDrink(int stockDecrease) {
-		if (isPositiveNum(stockDecrease)) {
+		if (UI.isPositiveNum(stockDecrease)) {
 			this.stockDrink = this.stockDrink + stockDecrease;
 		} else {
 			UI.ErrPositiveCall("");
@@ -57,28 +57,10 @@ public class Drink {
 	}
 
 	public void updateInfoDrink(String nameChange, int priceChange) {
-		if (strCheck(nameChange) && isPositiveNum(priceChange)) {
+		if (UI.isStrCheck(nameChange) && UI.isPositiveNum(priceChange)) {
 			this.nameDrink = nameChange;
 			this.priceDrink = priceChange;
 		}
 	}
 
-	private boolean isPositiveNum(int num) {
-		if (num >= 0) {
-			return true;
-		} else {
-			UI.ErrPositiveCall(MSG_NOT_POSITIVE_INT);
-			return false;
-		}
-	}
-
-	public boolean strCheck(String inputString) {
-		try {
-			double a = Integer.parseInt(inputString);
-			UI.ErrNotString(MSG_NOT_STRING);
-			return false;
-		} catch (Exception e) {
-			return true;
-		}
-	}
 }
