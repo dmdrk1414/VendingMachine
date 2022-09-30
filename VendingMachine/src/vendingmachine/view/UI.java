@@ -29,15 +29,28 @@ public class UI {
 		System.out.println("msg: " + msg + ":: 올바른 리턴값이 아닙니다.");
 	}
 
-	public static int returnSelectMenuNum() {
+	private static void ErrOutOfBoundSize(int menuSize) {
+		System.out.println("msg: ::0~" + (menuSize - 1) + " 범위의 값만 넣어주세요.");
+	}
+
+	public static int returnSelectMenuNum(int menuSize) {
 		Scanner sc = new Scanner(System.in);
 		int selectNum = 0;
 
 		selectNum = sc.nextInt();
-		if (isPositiveNum(selectNum)) {
+		if (UI.isPositiveNum(selectNum) && UI.isMenuSizeBoundary(selectNum, menuSize)) {
 			return selectNum;
 		} else {
 			return -1;
+		}
+	}
+
+	public static boolean isMenuSizeBoundary(int selectNum, int menuSize) {
+		if (selectNum < menuSize) {
+			return true;
+		} else {
+			UI.ErrOutOfBoundSize(menuSize);
+			return false;
 		}
 	}
 
@@ -51,6 +64,6 @@ public class UI {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(UI.returnSelectMenuNum());
+		System.out.println(UI.returnSelectMenuNum(6));
 	}
 }
