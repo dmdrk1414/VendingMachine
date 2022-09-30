@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import vendingmachine.view.UI;
 
 public class VendingMachine {
-	final String MSG_NOT_Pick_Value = "VendingMachine.deletePickDrink";
-	final String MSG_NOT_POSITIVE_INT = "VendingMachine.ErrPositiveCall";
-	final String PRINT_MENU = "음료수 리스트: ";
+	final private String MSG_NOT_Pick_Value = "VendingMachine.deletePickDrink";
+	final private String MSG_NOT_POSITIVE_INT = "VendingMachine.ErrPositiveCall";
+	final private String PRINT_MENU = "음료수 리스트: ";
 
 	private int amountCoin;
 	private ArrayList<Drink> productManagement;
