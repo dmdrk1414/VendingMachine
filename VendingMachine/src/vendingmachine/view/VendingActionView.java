@@ -66,9 +66,9 @@ public class VendingActionView {
 //		view.showDrinks2user(); // 음료수 보여주기.
 //		view.returnCoin2VendingMachine(); // 돈반환
 		view.showDrinks2user();
-//		view.registerNewDrink();
+		view.registerNewDrink();
 //		view.showDrinks2user();
-		view.deleteExistDrink2VendingMachine();
+//		view.deleteExistDrink2VendingMachine();
 		view.showDrinks2user(); // 음료수 보여주기.
 //		view.deleteExistDrink2VendingMachine();
 //		view.showDrinks2user(); // 음료수 보여주기

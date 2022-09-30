@@ -46,6 +46,11 @@ public class UI {
 		System.out.print("다시입력하세요.");
 	}
 
+	public static void ErrNotRegisterDrink(String msg) {
+		System.out.println("msg: " + msg + ":: 제품이름이 겹치는 것같아요 확인해주세요.");
+
+	}
+
 	public static int returnSelectMenuNum(int menuSize, String menuStr) {
 		Scanner sc = new Scanner(System.in);
 		int selectNum = 0;
@@ -137,4 +142,5 @@ public class UI {
 		}
 
 	}
+
 }
