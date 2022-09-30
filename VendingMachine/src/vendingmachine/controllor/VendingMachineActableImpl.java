@@ -10,12 +10,8 @@ public class VendingMachineActableImpl implements VendingMachineActable {
 
 	@Override
 	public int returnCoin(VendingMachine vendingMachine) {
-		if (!vendingMachine.isCoinEmpty()) {
-			int returnCoin = vendingMachine.returnAllAmountCoin();
-			return returnCoin;
-		} else {
-			return 0;
-		}
+		int returnCoin = vendingMachine.returnAllAmountCoin();
+		return returnCoin;
 	}
 
 	@Override

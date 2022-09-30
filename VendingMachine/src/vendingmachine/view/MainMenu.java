@@ -19,8 +19,8 @@ public class MainMenu {
 			}
 			switch (selectMenuCount) {
 			case 1: // menu 1.동전넣기
-				break;
 
+				break;
 			case 2: // menu 2.동전반환
 
 				break;

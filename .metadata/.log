@@ -4518,3 +4518,6 @@ Caused by: java.lang.IllegalArgumentException: Argument not valid
 
 !ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-09-30 18:05:28.778
 !MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-09-30 19:56:51.033
+!MESSAGE No .vrapperrc or _vrapperrc found.
