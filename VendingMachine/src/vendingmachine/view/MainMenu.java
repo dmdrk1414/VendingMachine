@@ -7,9 +7,10 @@ public class MainMenu {
 	public void run() {
 		VendingActionView vendingActionView = new VendingActionView();
 		int manuCounter = MENU_COUNTER_NUMBER;
-		int selectMenuCount = UI.returnSelectMenuNum(manuCounter, MANU_SELCEK_STRING);
 		while (true) {
+			int selectMenuCount = UI.returnSelectMenuNum(manuCounter, MANU_SELCEK_STRING);
 			if (selectMenuCount == 0) { // menu 0.나가기
+				System.out.println("잘~가세요!");
 				return;
 			}
 			switch (selectMenuCount) {

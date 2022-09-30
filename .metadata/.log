@@ -4597,3 +4597,6 @@ java.lang.IllegalArgumentException:
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-10-01 00:52:04.211
+!MESSAGE No .vrapperrc or _vrapperrc found.

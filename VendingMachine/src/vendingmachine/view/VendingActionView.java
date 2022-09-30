@@ -22,6 +22,7 @@ public class VendingActionView {
 			machineAction.inputCoin(this.machine, coinGiveUser);
 			System.out.println(coinGiveUser + "원 자판기에 투입!!");
 		}
+		System.out.println();
 	}
 
 	public void returnCoin2VendingMachine() { // menu 2.동전반환
@@ -29,6 +30,7 @@ public class VendingActionView {
 		if (user.addCoinCnt(CoinsReturn)) {
 			System.out.println("자판기의 모든 돈을 반환합니다.!!!");
 		}
+		System.out.println();
 	}
 
 	public void registerNewDrink() { // menu 3.제품등록
@@ -41,12 +43,14 @@ public class VendingActionView {
 		int stockNewDrink = UI.getInt();
 
 		machineAction.registerProduct(this.machine, nameNewDrink, priceNewDrink, stockNewDrink);
+		System.out.println();
 	}
 
 	public void deleteExistDrink2VendingMachine() { // menu 4.제품삭제
 		System.out.print("제거하고싶은 음료수를 고르세요: ");
 		String pickNameDrink = UI.getStrWord();
 		this.machineAction.deleteProduct(machine, pickNameDrink);
+		System.out.println();
 	}
 
 	public void updateDrinkInfo2VendingMachine() { // menu 5.제품업데이트
@@ -57,16 +61,19 @@ public class VendingActionView {
 		System.out.print("수정할 음료수 가격: ");
 		int priceDrink2Change = UI.getInt();
 		this.machineAction.reviseProduct(machine, nameDrinkPick, nameDrink2Change, priceDrink2Change);
+		System.out.println();
 	}
 
 	public void showDrinks2user() { // menu 6.제품보기
 		this.machineAction.showProducts(this.machine);
+		System.out.println();
 	}
 
 	public void chooseDrink2VendingMachine() { // menu 7.제품선택
 		System.out.print("선택할 음료수 이름: ");
 		String nameDrinkPick = UI.getStrWord();
 		this.machineAction.pickProduct(this.machine, nameDrinkPick);
+		System.out.println();
 	}
 
 //	public static void main(String[] args) {
