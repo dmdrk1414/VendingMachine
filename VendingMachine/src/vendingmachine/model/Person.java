@@ -20,5 +20,4 @@ public class Person {
 			this.coin = this.coin - coin2Add;
 		}
 	}
-
 }
