@@ -54,8 +54,8 @@ public class UI {
 		}
 	}
 
-	private static boolean isPositiveNum(int selectNum) {
-		if (selectNum >= 0) {
+	private static boolean isPositiveNum(int numCheck) {
+		if (numCheck >= 0) {
 			return true;
 		} else {
 			UI.ErrPositiveCall("");
