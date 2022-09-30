@@ -19,7 +19,7 @@ public class Person {
 	}
 
 	public boolean subtractCoinCnt(int coin2Add) {
-		if (UI.isPositiveNum(coin2Add)) {
+		if (UI.isPositiveNum(coin2Add) && this.coin > coin2Add) {
 			this.coin = this.coin - coin2Add;
 			return true;
 		} else {
