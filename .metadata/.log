@@ -4500,3 +4500,21 @@ Caused by: java.lang.IllegalArgumentException: Argument not valid
 
 !ENTRY net.sourceforge.vrapper.eclipse 4 0 2022-09-30 17:43:05.255
 !MESSAGE current state was null - this shouldn't have happened!
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-09-30 17:50:37.243
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-09-30 18:02:44.578
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-09-30 18:02:46.935
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-09-30 18:05:18.624
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-09-30 18:05:22.661
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-09-30 18:05:28.778
+!MESSAGE No .vrapperrc or _vrapperrc found.

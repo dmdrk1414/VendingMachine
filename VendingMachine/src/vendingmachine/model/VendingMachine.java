@@ -60,6 +60,20 @@ public class VendingMachine {
 		}
 	}
 
+	public boolean isUpdateDrinkInfo(String pickNameDrink, String nameChange, int priceChange) {
+		try {
+			if (isPickDrinkEmpty(pickNameDrink) && isPositiveNum(priceChange)) {
+				Drink drink = getPickDrink(pickNameDrink);
+				drink.updateInfoDrink(nameChange, priceChange);
+				return true;
+			}
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+		}
+		return false;
+
+	}
+
 	public void showDrinkList() {
 		System.out.print(PRINT_MENU);
 		for (Drink drink : this.productManagement) {
@@ -74,20 +88,6 @@ public class VendingMachine {
 		} else {
 			UI.ErrNotPickStock(pickNameDrink);
 		}
-	}
-
-	public boolean isUpdateDrinkInfo(String pickNameDrink, String nameChange, int priceChange) {
-		try {
-			if (isPickDrinkEmpty(pickNameDrink) && isPositiveNum(priceChange)) {
-				Drink drink = getPickDrink(pickNameDrink);
-				drink.updateInfoDrink(nameChange, priceChange);
-				return true;
-			}
-		} catch (NullPointerException e) {
-			e.printStackTrace();
-		}
-		return false;
-
 	}
 
 	private Drink getPickDrink(String pickNameDrink) throws NullPointerException {

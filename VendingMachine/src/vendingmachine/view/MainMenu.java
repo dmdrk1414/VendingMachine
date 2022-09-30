@@ -1,10 +1,15 @@
 package vendingmachine.view;
 
+import vendingmachine.controllor.VendingMachineActableImpl;
+import vendingmachine.model.VendingMachine;
+
 public class MainMenu {
 	final private int MENU_COUNTER_NUMBER = 8;
 	final private String MANU_SELCEK_STRING = "메인메뉴| 0.Exit 1.동전넣기 2.동전반환 3.제품등록 4.제품삭제 5.제품업데이트 6.제품보기 7.제품선택 |";
 
 	public void run() {
+		VendingMachine vendingMachine = new VendingMachine();
+		VendingMachineActableImpl vendingMachineAct = new VendingMachineActableImpl();
 
 		int manuCounter = MENU_COUNTER_NUMBER;
 		int selectMenuCount = UI.returnSelectMenuNum(manuCounter);
@@ -14,7 +19,6 @@ public class MainMenu {
 			}
 			switch (selectMenuCount) {
 			case 1: // menu 1.동전넣기
-
 				break;
 
 			case 2: // menu 2.동전반환
