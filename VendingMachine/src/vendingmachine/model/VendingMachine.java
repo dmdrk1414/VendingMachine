@@ -37,7 +37,9 @@ public class VendingMachine {
 
 	public int returnAllAmountCoin() {
 		if (this.amountCoin != 0) {
-			return this.amountCoin;
+			int getAmountCoin = this.amountCoin;
+			this.amountCoin = 0;
+			return getAmountCoin;
 		} else {
 			return 0;
 		}

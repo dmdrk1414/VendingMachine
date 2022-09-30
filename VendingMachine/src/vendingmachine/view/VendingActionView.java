@@ -42,5 +42,7 @@ public class VendingActionView {
 		view.returnCoin2VendingMachine(); // 돈반환
 		view.putInVendingMachineCoin(); // 돈넣기
 		view.showDrinks2user(); // 음료수 보여주기.
+		view.returnCoin2VendingMachine(); // 돈반환
+		System.out.println(view.machine.amountCoin);
 	}
 }
