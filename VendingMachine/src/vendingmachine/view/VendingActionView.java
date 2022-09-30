@@ -1,7 +1,5 @@
 package vendingmachine.view;
 
-import java.util.Scanner;
-
 import vendingmachine.controllor.VendingMachineActableImpl;
 import vendingmachine.model.Person;
 import vendingmachine.model.VendingMachine;
@@ -29,17 +27,16 @@ public class VendingActionView {
 	public void returnCoin2VendingMachine() { // menu 2.
 		int CoinsReturn = machineAction.returnCoin(this.machine);
 		if (user.addCoinCnt(CoinsReturn)) {
-			System.out.println(CoinsReturn);
 			System.out.println("자판기의 모든 돈을 반환합니다.!!!");
 		}
 	}
 
 	public void registerNewDrink() { // menu 3.
 		// TODO: VendingMachine class registerDrink 같은 이름이 있는지 확인을 해야됨. 추가.
-		Scanner sc = new Scanner(System.in);
+
 		System.out.println("제품을 추가합니다. (이름 가격 재고)을 적어주세요.");
 		System.out.print("음료수 이름: ");
-		String nameNewDrink = sc.next();
+		String nameNewDrink = UI.getStrWord();
 		System.out.print("음료수 가격: ");
 		int priceNewDrink = UI.getInt();
 		System.out.print("음료수 재고: ");
@@ -54,11 +51,11 @@ public class VendingActionView {
 
 	public static void main(String[] args) {
 		VendingActionView view = new VendingActionView();
-//		view.putInVendingMachineCoin(); // 돈넣기
-//		view.returnCoin2VendingMachine(); // 돈반환
-//		view.putInVendingMachineCoin(); // 돈넣기
-//		view.showDrinks2user(); // 음료수 보여주기.
-//		view.returnCoin2VendingMachine(); // 돈반환
+		view.putInVendingMachineCoin(); // 돈넣기
+		view.returnCoin2VendingMachine(); // 돈반환
+		view.putInVendingMachineCoin(); // 돈넣기
+		view.showDrinks2user(); // 음료수 보여주기.
+		view.returnCoin2VendingMachine(); // 돈반환
 		view.showDrinks2user();
 		view.registerNewDrink();
 		view.showDrinks2user();

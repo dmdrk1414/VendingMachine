@@ -1,5 +1,6 @@
 package vendingmachine.view;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UI {
@@ -13,8 +14,12 @@ public class UI {
 		System.out.println("msg: " + msg + ":: 양수를 입력해주세요.");
 	}
 
+	public static void ErrNotIntegerCall(String msg) {
+		System.out.println("msg: " + msg + ":: 정수를 입력해주세요.");
+	}
+
 	public static void ErrNotPickValue(String msg) {
-		System.out.println("msg: " + msg + ":: 찾고자하는 것이 없습니다.");
+		System.out.println("msg: " + msg + ":: 찾고자 하는 것이 없습니다.");
 	}
 
 	public static void ErrNotPickStock(String msg) {
@@ -22,7 +27,7 @@ public class UI {
 	}
 
 	public static void ErrNotString(String msg) {
-		System.out.println("msg: " + msg + ":: 문자만넣어주세요.");
+		System.out.println("msg: " + msg + ":: 문자만 넣어주세요.");
 	}
 
 	public static void ErrNotFormReturn(String msg) {
@@ -33,15 +38,26 @@ public class UI {
 		System.out.println("msg: ::0~" + (menuSize - 1) + " 범위의 값만 넣어주세요.");
 	}
 
-	public static int returnSelectMenuNum(int menuSize) {
+	public static void ErrNotStrWord(String msg) {
+		System.out.println("msg: " + msg + ":: 단어만 넣어주세요.");
+	}
+
+	public static void tryAgainMsg() {
+		System.out.print("다시입력하세요.");
+	}
+
+	public static int returnSelectMenuNum(int menuSize, String menuStr) {
 		Scanner sc = new Scanner(System.in);
 		int selectNum = 0;
 
-		selectNum = sc.nextInt();
-		if (UI.isPositiveNum(selectNum) && UI.isMenuSizeBoundary(selectNum, menuSize)) {
-			return selectNum;
-		} else {
-			return -1;
+		System.out.println(menuStr);
+		while (true) {
+			selectNum = UI.getInt();
+			if (UI.isPositiveNum(selectNum) && UI.isMenuSizeBoundary(selectNum, menuSize)) {
+				return selectNum;
+			} else {
+				continue;
+			}
 		}
 	}
 
@@ -77,15 +93,52 @@ public class UI {
 		Scanner sc = new Scanner(System.in);
 		int selectNum = 0;
 
-		selectNum = sc.nextInt();
-		if (UI.isPositiveNum(selectNum)) {
-			return selectNum;
-		} else {
-			return -1;
+		while (true) {
+			try {
+				selectNum = sc.nextInt();
+			} catch (InputMismatchException e) {
+				sc.nextLine();
+				UI.ErrNotIntegerCall("");
+				UI.tryAgainMsg();
+				continue;
+			}
+			if (UI.isPositiveNum(selectNum)) {
+				return selectNum;
+			} else {
+				UI.tryAgainMsg();
+			}
 		}
 	}
 
 	public static void main(String[] args) {
 		System.out.println(UI.getInt());
+	}
+
+	public static String getStrLine() {
+		Scanner sc = new Scanner(System.in);
+		String returnStr = "";
+
+		while (true) {
+			returnStr = sc.nextLine();
+			if (UI.isStrCheck(returnStr)) {
+				return returnStr;
+			} else {
+				UI.tryAgainMsg();
+			}
+		}
+
+	}
+
+	public static String getStrWord() {
+		while (true) {
+			String returnStr = UI.getStrLine();
+			if (!returnStr.contains(" ")) {
+				return returnStr;
+			} else {
+				UI.ErrNotStrWord(returnStr);
+				UI.tryAgainMsg();
+			}
+		}
+
 	}
 }

@@ -12,7 +12,7 @@ public class MainMenu {
 		VendingMachineActableImpl vendingMachineAct = new VendingMachineActableImpl();
 
 		int manuCounter = MENU_COUNTER_NUMBER;
-		int selectMenuCount = UI.returnSelectMenuNum(manuCounter);
+		int selectMenuCount = UI.returnSelectMenuNum(manuCounter, MANU_SELCEK_STRING);
 		while (true) {
 			if (selectMenuCount == 0) { // menu 0.나가기
 				return;
