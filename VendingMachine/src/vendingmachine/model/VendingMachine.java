@@ -47,9 +47,8 @@ public class VendingMachine {
 	}
 
 	public void registerDrink(String nameDrink, int priceDrink, int stockDrink) {
-		// TODO: registerDrink 같은 이름이 있는지 확인을 해야됨. 추가.
 		if (UI.isStrCheck(nameDrink) && UI.isPositiveNum(priceDrink) && UI.isPositiveNum(stockDrink)) {
-			if (!this.isNameDrink(nameDrink)) {
+			if (!this.isNameDrink2VendingMachine(nameDrink)) {
 				this.productManagement.add(new Drink(nameDrink, priceDrink, stockDrink));
 			} else {
 				UI.ErrNotRegisterDrink(nameDrink);
@@ -106,10 +105,11 @@ public class VendingMachine {
 	}
 
 	private boolean isPickDrinkEmpty(String pickNameDrink) {
-		return isNameDrink(pickNameDrink);
+		return isNameDrink2VendingMachine(pickNameDrink);
 	}
 
-	private boolean isNameDrink(String pickNameDrink) {
+	// 이름인가 ? true
+	private boolean isNameDrink2VendingMachine(String pickNameDrink) {
 		if (isProductManagementValue(pickNameDrink)) {
 			int pickDrinkIndex = VendingMachine.index;
 			Drink pickDrink = this.productManagement.get(pickDrinkIndex);
@@ -119,6 +119,7 @@ public class VendingMachine {
 		}
 	}
 
+	// 제품인가?
 	private boolean isProductManagementValue(String nameDrink2search) {
 		int endPos = (int) this.productManagement.size();
 		for (int i = 0; i < endPos; i = i + 1) {

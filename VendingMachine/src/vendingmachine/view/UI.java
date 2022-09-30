@@ -52,9 +52,7 @@ public class UI {
 	}
 
 	public static int returnSelectMenuNum(int menuSize, String menuStr) {
-		Scanner sc = new Scanner(System.in);
 		int selectNum = 0;
-
 		System.out.println(menuStr);
 		while (true) {
 			selectNum = UI.getInt();

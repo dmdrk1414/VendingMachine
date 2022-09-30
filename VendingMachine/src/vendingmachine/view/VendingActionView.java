@@ -32,8 +32,6 @@ public class VendingActionView {
 	}
 
 	public void registerNewDrink() { // menu 3.
-		// TODO: VendingMachine class registerDrink 같은 이름이 있는지 확인을 해야됨. 추가.
-
 		System.out.println("제품을 추가합니다. (이름 가격 재고)을 적어주세요.");
 		System.out.print("음료수 이름: ");
 		String nameNewDrink = UI.getStrWord();
@@ -48,9 +46,6 @@ public class VendingActionView {
 	public void deleteExistDrink2VendingMachine() {
 		System.out.print("제거하고싶은 음료수를 고르세요: ");
 		String pickNameDrink = UI.getStrWord();
-		// TODO
-//		String pickNameDrink = "환타";
-//		System.out.println();
 		this.machine.deletePickDrink(pickNameDrink);
 	}
 
