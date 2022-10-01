@@ -49,19 +49,19 @@ REAME파일 잘 작성하는법 [README 작성법](https://www.freecodecamp.org/
 7.  registerDrink : 제품등록 메서드
 8.  deletePickDrink : 제품 삭제 메서드
 9.  showDrinkList : 제품 확인 프린트 메서드 (추후 삭제할듯...)
-10.  pickDrinkType : 선택한 음료수를 this.namePickDrink변수에 저장
-11.  isUpdateDrinkInfo : Drink 데이터 업데이트 메서드
-12.  getPickDrink : 선택한 음료이름을 이용해 Drink 객체를 얻는다.
-13.  isPickDrinkEmpty : 선택한 음료가 비어있으면 true 메서드
-14.  isNameDrink : 이름이 있는지 확인 하는 메서드 ( 추후 수정할듯 : 선택한 음료의Drink의 재고가 비었는지? 로됨. 방법을 아직모르겠음.)
-15.  isProductManagementValue:  제품 메니저변수에서 값이 있는지 확인하는 메서드, 찾은후 index 반환( 추후 수정할듯. 메니저에서 값이 있는지 확인하는 지? 아직 굳이 필요한지 고민)
-16.  isPositiveNum : 양수확인 메서드
-17.  strCheck : 문자열 체크
+10. pickDrinkType : 선택한 음료수를 this.namePickDrink변수에 저장
+11. isUpdateDrinkInfo : Drink 데이터 업데이트 메서드
+12. getPickDrink : 선택한 음료이름을 이용해 Drink 객체를 얻는다.
+13. isPickDrinkEmpty : 선택한 음료가 비어있으면 true 메서드
+14. isNameDrink : 이름이 있는지 확인 하는 메서드 ( 추후 수정할듯 : 선택한 음료의Drink의 재고가 비었는지? 로됨. 방법을 아직모르겠음.)
+15. isProductManagementValue: 제품 메니저변수에서 값이 있는지 확인하는 메서드, 찾은후 index 반환( 추후 수정할듯. 메니저에서 값이 있는지 확인하는 지? 아직 굳이 필요한지 고민)
+16. isPositiveNum : 양수확인 메서드
+17. strCheck : 문자열 체크
 
 #### Drink 클래스 추가
 
 1. nameDrink, priceDrink, stockDrink 변수 추가 : 음료수의 정보
-2. addStockOfDrink, subtractStockOfDrink : 재고 관리 메서드 
+2. addStockOfDrink, subtractStockOfDrink : 재고 관리 메서드
 3. isNameDrink : 추측한 이름과 음료의 이름이 같은지 확인 (getter 이용안하기) 메서드
 4. isStockEmpty : 재고가 empty면 return true 메서드
 5. showNameDrink : 제품 이름 프린트 메서드
@@ -96,13 +96,10 @@ REAME파일 잘 작성하는법 [README 작성법](https://www.freecodecamp.org/
 6. showProducts : 제품 보여주기
 7. pickProduct : 제품 선택
 
-
-
 ## 😍일기😍
 
-### 0929 
+### 0929
 
-오늘은 자판기를 프로그래밍을 하였습니다. 메시지를 보내라, 변수명, 함수, 클래스 독립성, 함수 15줄이내 및 한가지 기능만 구현, 참 힘들다는 것을 느겼습니다. 모호한 개념들이 정리되는 기분이라 참 좋내요,  run함수를 한번 만들어서 view 함수를 만들어 봐야겠어요.
+오늘은 자판기를 프로그래밍을 하였습니다. 메시지를 보내라, 변수명, 함수, 클래스 독립성, 함수 15줄이내 및 한가지 기능만 구현, 참 힘들다는 것을 느겼습니다. 모호한 개념들이 정리되는 기분이라 참 좋내요, run함수를 한번 만들어서 view 함수를 만들어 봐야겠어요.
 
 ## 📌 디렉토리 구조
-

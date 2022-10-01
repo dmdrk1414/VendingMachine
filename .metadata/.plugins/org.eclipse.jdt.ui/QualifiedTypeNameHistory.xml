@@ -25,4 +25,6 @@
     <fullyQualifiedTypeName name="vendingmachine.model.VendingMachine"/>
     <fullyQualifiedTypeName name="vendingmachine.view.VendingActionView"/>
     <fullyQualifiedTypeName name="vendingmachine.view.MainMenu"/>
+    <fullyQualifiedTypeName name="vendingmachine.view.UI"/>
+    <fullyQualifiedTypeName name="vendingmachine.model.Drink"/>
 </qualifiedTypeNameHistroy>
