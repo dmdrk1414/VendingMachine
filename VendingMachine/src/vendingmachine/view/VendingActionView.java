@@ -41,16 +41,15 @@ public class VendingActionView {
 		int priceNewDrink = UI.getInt();
 		System.out.print("음료수 재고: ");
 		int stockNewDrink = UI.getInt();
-
 		machineAction.registerProduct(this.machine, nameNewDrink, priceNewDrink, stockNewDrink);
-		System.out.println();
+		this.showDrinks2user();
 	}
 
 	public void deleteExistDrink2VendingMachine() { // menu 4.제품삭제
 		System.out.print("제거하고싶은 음료수를 고르세요: ");
 		String pickNameDrink = UI.getStrWord();
 		this.machineAction.deleteProduct(machine, pickNameDrink);
-		System.out.println();
+		this.showDrinks2user();
 	}
 
 	public void updateDrinkInfo2VendingMachine() { // menu 5.제품업데이트
@@ -61,7 +60,7 @@ public class VendingActionView {
 		System.out.print("수정할 음료수 가격: ");
 		int priceDrink2Change = UI.getInt();
 		this.machineAction.reviseProduct(machine, nameDrinkPick, nameDrink2Change, priceDrink2Change);
-		System.out.println();
+		this.showDrinks2user();
 	}
 
 	public void showDrinks2user() { // menu 6.제품보기
