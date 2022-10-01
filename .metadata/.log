@@ -4671,3 +4671,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-10-01 12:06:16.397
 !MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-10-01 12:31:28.659
+!MESSAGE No .vrapperrc or _vrapperrc found.

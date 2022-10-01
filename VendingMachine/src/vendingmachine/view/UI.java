@@ -51,6 +51,10 @@ public class UI {
 
 	}
 
+	public static void deleteCompleMsg(String msg) {
+		System.out.println("msg: " + msg + ":: 제거 완료했습니다.");
+	}
+
 	public static int returnSelectMenuNum(int menuSize, String menuStr) {
 		int selectNum = 0;
 		System.out.println(menuStr);

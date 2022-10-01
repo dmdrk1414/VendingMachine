@@ -56,12 +56,15 @@ public class VendingMachine {
 		}
 	}
 
-	public void deletePickDrink(String nameDrink2Delete) {
+	public boolean deletePickDrink(String nameDrink2Delete) {
 		if (isProductManagementValue(nameDrink2Delete)) {
 			int deleteIndex = VendingMachine.index;
 			this.productManagement.remove(deleteIndex);
+			UI.deleteCompleMsg(nameDrink2Delete);
+			return true;
 		} else {
 			UI.ErrNotPickValue("");
+			return false;
 		}
 	}
 
