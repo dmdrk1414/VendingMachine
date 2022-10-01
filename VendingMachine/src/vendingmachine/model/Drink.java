@@ -45,7 +45,7 @@ public class Drink {
 	}
 
 	public boolean isNameDrink(String suppositionName) {
-		if (this.nameDrink.equals(suppositionName)) {
+		if (this.tempNameDrink.equals(suppositionName)) {
 			return true;
 		} else {
 			return false;
