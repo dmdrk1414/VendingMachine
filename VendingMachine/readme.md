@@ -38,7 +38,7 @@ REAME파일 잘 작성하는법 [README 작성법](https://www.freecodecamp.org/
 
 ## 📌 클래스 메서드 추가 설명
 
-#### VendingMachine 클래스 추가 <br>
+#### VendingMachine 클래스 추가 <br>ss
 
 1.  amountCoin : 자판기가 가지고있는 총 코인 갯수 변수
 2.  productManagement 을 이용한 Drink클래스 관리
