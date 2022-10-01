@@ -49,10 +49,21 @@ public class VendingMachine {
 	public void registerDrink(String nameDrink, int priceDrink, int stockDrink) {
 		if (UI.isStrCheck(nameDrink) && UI.isPositiveNum(priceDrink) && UI.isPositiveNum(stockDrink)) {
 			if (!this.isNameDrink2VendingMachine(nameDrink)) {
-				this.productManagement.add(new Drink(nameDrink, priceDrink, stockDrink));
+				this.changeOldName2Vending(this.productManagement);
+				Drink drink = new Drink(nameDrink, priceDrink, stockDrink);
+				this.productManagement.add(drink);
+				if (drink.isNewDrink()) {
+					drink.changeName(nameDrink);
+				}
 			} else {
 				UI.ErrNotRegisterDrink(nameDrink);
 			}
+		}
+	}
+
+	public void changeOldName2Vending(ArrayList<Drink> productManagement) {
+		for (Drink drink : productManagement) {
+			drink.changeOldName();
 		}
 	}
 

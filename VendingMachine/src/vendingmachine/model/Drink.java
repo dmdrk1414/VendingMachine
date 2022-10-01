@@ -7,8 +7,10 @@ public class Drink {
 	final String MSG_NOT_STRING = "Drink.updateInfoDrink";
 
 	private String nameDrink;
+	private String tempNameDrink;
 	private int priceDrink;
 	private int stockDrink; // stock은 재고를 말한다.
+	private boolean isNewDrink;
 
 	public Drink() {
 		System.out.println("Drink에 이름, 가격, 재고현황을 추가해줘");
@@ -19,7 +21,9 @@ public class Drink {
 	}
 
 	public Drink(String nameDrink, int priceDrink, int stockDrink) {
+		this.isNewDrink = true;
 		this.nameDrink = nameDrink;
+		this.tempNameDrink = nameDrink;
 		this.priceDrink = priceDrink;
 		this.stockDrink = stockDrink;
 	}
@@ -65,6 +69,23 @@ public class Drink {
 			this.nameDrink = nameChange;
 			this.priceDrink = priceChange;
 		}
+	}
+
+	public void changeName(String nameDrink) {
+		if (this.isNewDrink) {
+			this.nameDrink = "(new)" + nameDrink;
+		} else {
+			this.nameDrink = nameDrink;
+		}
+	}
+
+	public void changeOldName() {
+		this.isNewDrink = false;
+		this.nameDrink = this.tempNameDrink;
+	}
+
+	public boolean isNewDrink() {
+		return this.isNewDrink;
 	}
 
 }
