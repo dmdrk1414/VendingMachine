@@ -65,17 +65,17 @@ public class VendingMachine {
 		}
 	}
 
-	public boolean isUpdateDrinkInfo(String pickNameDrink, String nameChange, int priceChange) {
+	public void isUpdateDrinkInfo(String pickNameDrink, String nameChange, int priceChange) {
 		try {
-			if (isPickDrinkEmpty(pickNameDrink) && UI.isPositiveNum(priceChange)) {
+			if (this.isNameDrink2VendingMachine(pickNameDrink) && UI.isPositiveNum(priceChange)) {
 				Drink drink = getPickDrink(pickNameDrink);
 				drink.updateInfoDrink(nameChange, priceChange);
-				return true;
+			} else {
+				UI.ErrNotPickValue(pickNameDrink);
 			}
 		} catch (NullPointerException e) {
 			e.printStackTrace();
 		}
-		return false;
 
 	}
 
@@ -90,8 +90,6 @@ public class VendingMachine {
 	public void pickDrinkType(String pickNameDrink) {
 		if (!isPickDrinkEmpty(pickNameDrink)) {
 			this.namePickDrink = pickNameDrink;
-		} else {
-			UI.ErrNotPickStock(pickNameDrink);
 		}
 	}
 
@@ -110,6 +108,7 @@ public class VendingMachine {
 			Drink pickDrink = this.productManagement.get(pickDrinkIndex);
 			return pickDrink.isStockEmpty();
 		} else {
+			UI.ErrNotPickStock(pickNameDrink);
 			return false;
 		}
 	}
@@ -121,6 +120,7 @@ public class VendingMachine {
 			Drink pickDrink = this.productManagement.get(pickDrinkIndex);
 			return pickDrink.isNameDrink(pickNameDrink);
 		} else {
+
 			return false;
 		}
 	}

@@ -26,8 +26,7 @@ public class VendingMachineActableImpl implements VendingMachineActable {
 
 	@Override
 	public void reviseProduct(VendingMachine vendingMachine, String nameDrink, String name2Change, int price2Change) {
-		if (vendingMachine.isUpdateDrinkInfo(nameDrink, name2Change, price2Change)) {
-		}
+		vendingMachine.isUpdateDrinkInfo(nameDrink, name2Change, price2Change);
 	}
 
 	@Override
