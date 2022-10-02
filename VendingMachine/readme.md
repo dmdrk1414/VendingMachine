@@ -38,43 +38,93 @@ REAME파일 잘 작성하는법 [README 작성법](https://www.freecodecamp.org/
 
 ## 📌 클래스 메서드 추가 설명
 
-#### VendingMachine 클래스 추가 <br>ss
+**MODEL**
+
+#### VendingMachine 클래스 추가 <br>
+
+지역변수
 
 1.  amountCoin : 자판기가 가지고있는 총 코인 갯수 변수
 2.  productManagement 을 이용한 Drink클래스 관리
 3.  namePickDrink 을 이용해 골라진 음료수 얻는다.
-4.  isCoinEmpty : 코인이 있는지 empty인지 확인하는 메서드
-5.  addCoin2VendingMachine : 코인을 추가하는 메서드
-6.  returnAllAmountCoin : 코인을 반환하는 메서드
-7.  registerDrink : 제품등록 메서드
-8.  deletePickDrink : 제품 삭제 메서드
-9.  showDrinkList : 제품 확인 프린트 메서드 (추후 삭제할듯...)
-10. pickDrinkType : 선택한 음료수를 this.namePickDrink변수에 저장
-11. isUpdateDrinkInfo : Drink 데이터 업데이트 메서드
-12. getPickDrink : 선택한 음료이름을 이용해 Drink 객체를 얻는다.
-13. isPickDrinkEmpty : 선택한 음료가 비어있으면 true 메서드
-14. isNameDrink : 이름이 있는지 확인 하는 메서드 ( 추후 수정할듯 : 선택한 음료의Drink의 재고가 비었는지? 로됨. 방법을 아직모르겠음.)
-15. isProductManagementValue: 제품 메니저변수에서 값이 있는지 확인하는 메서드, 찾은후 index 반환( 추후 수정할듯. 메니저에서 값이 있는지 확인하는 지? 아직 굳이 필요한지 고민)
-16. isPositiveNum : 양수확인 메서드
-17. strCheck : 문자열 체크
+
+스태틱
+
+1. static index : 찾은 Drink의 인덱스를 찾기위한 방법. deletePickDrink getPickDrink isPickDrinkEmpty  isNameDrink2VendingMachine 여기 메서드에서 매개변수를 이용한 값을 전달하는 방법을 몰라 static으로 변수 를 만들었다. (차후 수정가능)
+
+메서드
+
+1.  isCoinEmpty : 코인이 있는지 empty인지 확인하는 메서드
+2.  addCoin2VendingMachine : 코인을 추가하는 메서드
+3.  returnAllAmountCoin : 코인을 반환하는 메서드
+4.  registerDrink : 제품등록 메서드
+5.  changeOldName2Vending : 새로운 음료수가 아닌 오래된 음료수의 이름을 봐꾼다 (new)을 삭제함.
+6.  deletePickDrink : 제품 삭제 메서드
+7.  isUpdateDrinkInfo : Drink 데이터 업데이트 메서드
+8.  showDrinkList : 제품 확인 프린트 메서드 (추후 삭제할듯...)
+9.  pickDrinkType : 선택한 음료수를 this.namePickDrink변수에 저장
+10.  getPickDrink : 선택한 음료이름을 이용해 Drink 객체를 얻는다.
+11.  isPickDrinkEmpty : 선택한 음료가 비어있으면 true 메서드
+12.  isNameDrink2VendingMachine:  선택한 Drink의 isNameDrink의 메서드를 콜을 하여 이름이 비어있는지 확인하는 메서드
+13.  isProductManagementValue: 제품 메니저변수에서 값이 있는지 확인하는 메서드, 찾은후 index 반환( 추후 수정할듯. 메니저에서 값이 있는지 확인하는 지? 아직 굳이 필요한지 고민)
 
 #### Drink 클래스 추가
 
+변수
+
 1. nameDrink, priceDrink, stockDrink 변수 추가 : 음료수의 정보
-2. addStockOfDrink, subtractStockOfDrink : 재고 관리 메서드
-3. isNameDrink : 추측한 이름과 음료의 이름이 같은지 확인 (getter 이용안하기) 메서드
-4. isStockEmpty : 재고가 empty면 return true 메서드
-5. showNameDrink : 제품 이름 프린트 메서드
-6. updateInfoDrink : 음료 info 업데이트 메서드
-7. isPositiveNum : 양수인지 체크 메서드
-8. strCheck: 문자열인지 체크 메서드
+2. tempNameDrink (new)가 안붙은 오래된 이름,  isNameDrink 메서드에서  suppositionName 매개변수와 비교를 한다.
+3. isNewDrink 새로운 음료수인지 확인하는 변수
+
+메서드
+
+1. addStockOfDrink, subtractStockOfDrink : 재고 관리 메서드
+2. isNameDrink : 추측한 이름과 음료의 이름이 같은지 확인 (getter 이용안하기) 메서드
+3. isStockEmpty : 재고가 empty면 return true 메서드
+4. showNameDrink : 제품 이름 프린트 메서드
+5. updateInfoDrink : 음료 info 업데이트 메서드
+6. changeName: 새로운 (new)이름을 붙인다.
+7. changeOldName: (new)이름을 떼고 이름을 넣는다
+8. isNewDrink: 새로운 drink인지 확인을 해주는 메서드
+
+#### Person 클래스 추가
+
+변수
+
+1. coin: 사람이 가지고 있는 코인
+
+메서드
+
+1. addCoinCnt, subtractCoinCnt: 코인의 갯수를 관리한다.
+
+---
+
+**VIEW**
 
 #### UI 클래스 추가
 
-1. ErrPositiveCall : 양수를 입력해주세요.
-2. ErrNotPickValue : 찾고자하는 것이 없습니다.
-3. ErrNotPickStock : 재고가 없네요.
-4. ErrNotString : 문자만넣어주세요.
+1. ErrPositiveCall: 양수를 입력해주세요.
+2. ErrNotIntegerCall: 
+3. ErrNotPickValue: 찾고자하는 것이 없습니다.
+4. ErrNotPickStock: 재고가 없네요.
+5. ErrNotString: 문자만넣어주세요.
+6. ErrNotFormReturn
+7. ErrOutOfBoundSize
+8. ErrNotStrWord
+9. tryAgainMsg
+10. ErrNotRegisterDrink
+11. deleteCompleMsg
+12. returnSelectMenuNum
+13. isMenuSizeBoundary
+14. isPositiveNum
+15. isStrCheck
+16. getInt
+17. getStrLine
+18. getStrWord
+
+---
+
+**CONTROLLOR**
 
 #### VendingMachineActable 인터페이스 추가
 
