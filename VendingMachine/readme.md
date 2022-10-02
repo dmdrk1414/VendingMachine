@@ -103,24 +103,53 @@ REAME파일 잘 작성하는법 [README 작성법](https://www.freecodecamp.org/
 
 #### UI 클래스 추가
 
+에러확인 메세지
+
 1. ErrPositiveCall: 양수를 입력해주세요.
 2. ErrNotIntegerCall: 
 3. ErrNotPickValue: 찾고자하는 것이 없습니다.
 4. ErrNotPickStock: 재고가 없네요.
 5. ErrNotString: 문자만넣어주세요.
-6. ErrNotFormReturn
-7. ErrOutOfBoundSize
-8. ErrNotStrWord
-9. tryAgainMsg
-10. ErrNotRegisterDrink
-11. deleteCompleMsg
-12. returnSelectMenuNum
-13. isMenuSizeBoundary
-14. isPositiveNum
-15. isStrCheck
-16. getInt
-17. getStrLine
-18. getStrWord
+6. ErrNotFormReturn: 올바른 리턴값이 아닙니다.
+7. ErrOutOfBoundSize : msg: ::0~" + (menuSize - 1) + " 범위의 값만 넣어주세요.
+8. ErrNotStrWord : "msg: " + msg + ":: 단어만 넣어주세요.
+9. tryAgainMsg : 다시입력하세요.
+10. ErrNotRegisterDrink : msg: " + msg + ":: 제품이름이 겹치는 것같아요 확인해주세요.
+
+메서드
+
+1. deleteCompleMsg : 제거 완료했습니다.
+2. returnSelectMenuNum: 선택하는 메뉴의 숫자를 리턴한다.
+3. isMenuSizeBoundary: 메뉴가 총메뉴의 바운더리에서 있는가 
+4. isPositiveNum: 정수인지 확인하는 메서드
+5. isStrCheck: 문자열 체크
+6. getInt: 정수를 얻는 메서드
+7. getStrLine:  한줄의 문자열 입력을 받는 메서드
+8. getStrWord: 단어의 입력을 받는 메서드
+
+#### MainMenu
+
+menu run()을 해주는 메서드
+
+#### VendingActionView
+
+변수
+
+1. user: Person객체의 변수
+2. machine : VendingMachine의 변수
+3. machineAction: VendingMachineActableImpl의 변수
+
+메서드
+
+1. putInVendingMachineCoin:  menu 1.동전넣기
+2. returnCoin2VendingMachine: menu 2.동전반환
+3. registerNewDrink: menu 3.제품등록
+4. deleteExistDrink2VendingMachine: menu 4.제품삭제
+5. updateDrinkInfo2VendingMachine: menu 5.제품업데이트
+6. showDrinks2user: menu 6.제품보
+7. chooseDrink2VendingMachine: menu 7.제품선택
+
+
 
 ---
 
@@ -128,13 +157,13 @@ REAME파일 잘 작성하는법 [README 작성법](https://www.freecodecamp.org/
 
 #### VendingMachineActable 인터페이스 추가
 
-1. 동전을 넣는다.
-2. 잔돈을 반환
-3. 제품 등록
-4. 제품 삭제
-5. 제품 수정
-6. 메뉴 보기
-7. 메뉴 선택
+1. inputCoin: 동전을 넣는다.
+2. returnCoin: 잔돈을 반환
+3. registerProduct: 제품 등록
+4. deleteProduct: 제품 삭제
+5. reviseProduct: 제품 수정
+6. showProducts: 메뉴 보기
+7. pickProduct: 메뉴 선택
 
 #### VendingMachineActableImpl 클래스 추가
 
@@ -151,5 +180,11 @@ REAME파일 잘 작성하는법 [README 작성법](https://www.freecodecamp.org/
 ### 0929
 
 오늘은 자판기를 프로그래밍을 하였습니다. 메시지를 보내라, 변수명, 함수, 클래스 독립성, 함수 15줄이내 및 한가지 기능만 구현, 참 힘들다는 것을 느겼습니다. 모호한 개념들이 정리되는 기분이라 참 좋내요, run함수를 한번 만들어서 view 함수를 만들어 봐야겠어요.
+
+### 10/02
+
+오늘은 친척분들중 프로그래머 분이 계셨다는걸 알았습니다. 바로 전화를 해서 여줘보니 계발을 좋아한다는 것을 어필하라! 라고 말씀을 하였습니다. 라고 하셨어요 매일 커밋과 계발의 흥미를 보여달라고 하시네요. 참 감사한 조언 잘들었습니다. 
+
+친척집을 갔다와 오늘은 README 파일을 정리를 하였습니다.
 
 ## 📌 디렉토리 구조
