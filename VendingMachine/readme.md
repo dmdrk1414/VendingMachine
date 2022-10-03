@@ -22,9 +22,13 @@
 
 README 을 적는 방법은 [README 가이드](https://github.com/RichardLitt/standard-readme/blob/master/spec.md#title)을 참고 하였습니다.
 
-REAME파일 잘 작성하는법 [README 작성법](https://www.freecodecamp.org/korean/news/gisheobeu-peurojegteue-rideumi-paileul-jal-jagseonghaneun-bangbeob/) 연습을 해야겠어용<br>
+README파일 잘 작성하는법 [README 작성법](https://www.freecodecamp.org/korean/news/gisheobeu-peurojegteue-rideumi-paileul-jal-jagseonghaneun-bangbeob/) 연습을 해야겠어용<br>
 
-저에게 많은 생각을 주었던 [오테코 피드백](https://blog.naver.com/dmdrk1414/222886640283)을 보면서 한번 연습해야 겠습니다.<br><br>
+저에게 많은 생각을 주었던 [오테코 피드백](https://blog.naver.com/dmdrk1414/222886640283)을 보면서 한번 연습해야 겠습니다.<br>
+
+README파일 [리드미 파일 규칙](https://velog.io/@shin6403/Git-git-%EC%BB%A4%EB%B0%8B-%EC%BB%A8%EB%B2%A4%EC%85%98-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0) 을 참고하였습니다.
+
+<br>
 
 ## 📌 REAME파일 작성법 블로그의 가이드 내용을 따라해 볼께요
 
