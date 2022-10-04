@@ -1,9 +1,0 @@
-package vendingmachine.model;
-
-public class Person {
-	private int coin;
-
-	public Person() {
-		this.coin = 2000;
-	}
-}
