@@ -1,0 +1,43 @@
+package vendingmachine.model;
+
+import vendingmachine.view.UI;
+
+public class Person {
+	private int coin;
+
+	public Person() {
+		this.coin = 2000;
+	}
+
+	public void addCoinCnt(int coin2Add) {
+		if (this.isPositiveNum(coin2Add)) {
+			this.coin = this.coin + coin2Add;
+		}
+	}
+
+	public void subtractCoinCnt(int coin2Add) {
+		if (this.isPositiveNum(coin2Add)) {
+			this.coin = this.coin - coin2Add;
+		}
+	}
+
+	private boolean isPositiveNum(int num) {
+		if (num >= 0) {
+			return true;
+		} else {
+			UI.ErrPositiveCall("");
+			return false;
+		}
+	}
+
+	public boolean strCheck(String inputString) {
+		try {
+			double a = Integer.parseInt(inputString);
+			UI.ErrNotString(MSG_NOT_STRING);
+			return false;
+		} catch (Exception e) {
+			return true;
+		}
+	}
+
+}

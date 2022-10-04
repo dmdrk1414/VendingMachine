@@ -1,0 +1,19 @@
+package vendingmachine.controllor;
+
+import vendingmachine.model.VendingMachine;
+
+public interface VendingMachineActable {
+	public void inputCoin(int CoinCnt);
+
+	public int returnCoin();
+
+	public void registerProduct(VendingMachine vendingMachine, String nameDrink, int priceDrink, int stockDrink);
+
+	public void deleteProduct(String nameDrink);
+
+	public void reviseProduct(VendingMachine vendingMachine,String nameDrink, String name2Change, int price2Change);
+
+	public void showProducts();
+
+	public void pickProduct(String name2Pick);
+}

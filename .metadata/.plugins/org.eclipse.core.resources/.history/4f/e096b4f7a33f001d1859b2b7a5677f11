@@ -1,0 +1,5 @@
+package vendingmachine.controllor;
+
+public class VendingMachineImpl implements VendingMachineActable {
+
+}

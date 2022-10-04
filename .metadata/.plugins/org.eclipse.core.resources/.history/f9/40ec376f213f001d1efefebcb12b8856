@@ -1,0 +1,53 @@
+package vendingmachine;
+
+public class MachineActImpl implements MachineAct {
+
+	@Override
+	public void insert_Coin() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void return_Coin() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void enter_Menu() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete_Menu() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update_Menu() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void enter_Stock() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void print_Menu() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void choice_Menu() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
