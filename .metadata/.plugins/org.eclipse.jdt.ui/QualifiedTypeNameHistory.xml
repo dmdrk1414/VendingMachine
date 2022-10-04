@@ -24,7 +24,13 @@
     <fullyQualifiedTypeName name="vendingmachine.view.MainMenu"/>
     <fullyQualifiedTypeName name="vendingmachine.view.UI"/>
     <fullyQualifiedTypeName name="vendingmachine.model.Drink"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+=======
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+>>>>>>> test
 </qualifiedTypeNameHistroy>
