@@ -1,7 +1,6 @@
 INDEX VERSION 1.131+C:\work-space-container\project_second_school\.metadata\.plugins\org.eclipse.jdt.core
 3249348876.index
 2894047641.index
-680738733.index
 3758555576.index
 1845728710.index
 1526958051.index
@@ -15,7 +14,6 @@ INDEX VERSION 1.131+C:\work-space-container\project_second_school\.metadata\.plu
 3791033230.index
 1528167586.index
 2110369462.index
-2726785889.index
 4133022255.index
 415621508.index
 1865797976.index

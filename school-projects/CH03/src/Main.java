@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -178,10 +179,10 @@ public class Main {
 
 		// TODO: 2번
 //        scanner 변수 생성 및 초기화; // 필요한 파일 import시킬 것
-		S scanner = new Scanner(System.in);
-=======
-		scanner scanner = new Scanner(System.in);
->>>>>>> test
+//		S scanner = new Scanner(System.in);
+//=======
+		Scanner scanner = new Scanner(System.in);
+//>>>>>>> test
         double dArr1[][] = run1(scanner);
         printArray(dArr1);
         System.out.println();
@@ -189,9 +190,9 @@ public class Main {
         scanner.
 
 		// TODO: 3번
-		double dArr1[][] = run1(scanner);
-		printArray(dArr1);
-		System.out.println();
+//		double dArr1[][] = run1(scanner);
+//		printArray(dArr1);
+//		System.out.println();
 
 //		// TODO: 4번
 		double dArr2[][] = run2(scanner);

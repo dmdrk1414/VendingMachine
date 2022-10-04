@@ -7788,3 +7788,6 @@ java.lang.NullPointerException
 
 !ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-10-04 18:18:28.336
 !MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2022-10-04 18:23:16.810
+!MESSAGE No .vrapperrc or _vrapperrc found.
