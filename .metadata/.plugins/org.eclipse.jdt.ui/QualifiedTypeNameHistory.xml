@@ -27,4 +27,6 @@
     <fullyQualifiedTypeName name="vendingmachine.view.MainMenu"/>
     <fullyQualifiedTypeName name="vendingmachine.view.UI"/>
     <fullyQualifiedTypeName name="vendingmachine.model.Drink"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
 </qualifiedTypeNameHistroy>
