@@ -39,5 +39,4 @@ public class VendingMachineActableImpl implements VendingMachineActable {
     public void pickProduct(VendingMachine vendingMachine, String name2Pick) {
         vendingMachine.pickDrinkType(name2Pick);
     }
-
 }

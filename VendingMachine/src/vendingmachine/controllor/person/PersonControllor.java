@@ -50,5 +50,4 @@ public class PersonControllor {
         this.machineAction.showProducts(this.machine);
         System.out.println();
     }
-
 }
