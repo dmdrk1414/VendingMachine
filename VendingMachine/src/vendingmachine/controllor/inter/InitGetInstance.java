@@ -6,11 +6,6 @@ import vendingmachine.model.Person;
 import vendingmachine.model.VendingMachine;
 
 public class InitGetInstance {
-    Manager manager;
-    VendingMachine machine;
-    VendingMachineActableImpl machineAction;
-    Person person;
-
     public InitGetInstance() {
     }
 
