@@ -1,4 +1,4 @@
-package vendingmachine.controllor;
+package vendingmachine.controllor.inter;
 
 import vendingmachine.model.VendingMachine;
 

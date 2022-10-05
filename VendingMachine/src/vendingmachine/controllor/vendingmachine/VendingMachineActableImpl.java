@@ -1,5 +1,6 @@
-package vendingmachine.controllor;
+package vendingmachine.controllor.vendingmachine;
 
+import vendingmachine.controllor.inter.VendingMachineActable;
 import vendingmachine.model.VendingMachine;
 
 public class VendingMachineActableImpl implements VendingMachineActable {
