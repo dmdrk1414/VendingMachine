@@ -11,9 +11,13 @@ public class PersonControllor {
     VendingMachineActableImpl machineAction;
 
     public PersonControllor() {
-        this.user = new Person();
-        this.machine = new VendingMachine();
-        this.machineAction = new VendingMachineActableImpl();
+    }
+
+    public PersonControllor(Person user, VendingMachine machine, VendingMachineActableImpl machineAction) {
+        super();
+        this.user = user;
+        this.machine = machine;
+        this.machineAction = machineAction;
     }
 
     public void putInVendingMachineCoin() { // menu 1.동전넣기

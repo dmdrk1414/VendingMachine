@@ -15,9 +15,13 @@ public class ManagerControllor {
     VendingMachineActableImpl machineAction;
 
     public ManagerControllor() {
-        this.manager = new Manager();
-        this.machine = new VendingMachine();
-        this.machineAction = new VendingMachineActableImpl();
+    }
+
+    public ManagerControllor(Manager manager, VendingMachine machine, VendingMachineActableImpl machineAction) {
+        super();
+        this.manager = manager;
+        this.machine = machine;
+        this.machineAction = machineAction;
     }
 
     public void registerNewDrink() { // menu 1.제품등록
@@ -50,7 +54,7 @@ public class ManagerControllor {
         this.showDrinks2user();
     }
 
-    public void showDrinks2user() { // menu 6.제품보기
+    public void showDrinks2user() { // menu 4.제품보기
         this.machineAction.showProducts(this.machine);
         System.out.println();
     }
