@@ -11,6 +11,7 @@ public class PersonControllor {
     VendingMachineActableImpl machineAction;
 
     public PersonControllor() {
+        System.out.println("3");
     }
 
     public PersonControllor(Person user, VendingMachine machine, VendingMachineActableImpl machineAction) {
@@ -38,15 +39,15 @@ public class PersonControllor {
         System.out.println();
     }
 
-    public void showDrinks2user() { // menu 3.제품보기
-        this.machineAction.showProducts(this.machine);
-        System.out.println();
-    }
-
-    public void chooseDrink2VendingMachine() { // menu 4.제품선택
+    public void chooseDrink2VendingMachine() { // menu 3.제품선택
         System.out.print("선택할 음료수 이름: ");
         String nameDrinkPick = UI.getStrWord();
         this.machineAction.pickProduct(this.machine, nameDrinkPick);
+        System.out.println();
+    }
+
+    public void showDrinks2user() { // menu 4.제품보기
+        this.machineAction.showProducts(this.machine);
         System.out.println();
     }
 

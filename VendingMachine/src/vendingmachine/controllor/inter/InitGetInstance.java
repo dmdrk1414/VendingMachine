@@ -15,6 +15,10 @@ public class InitGetInstance {
         return new VendingMachine();
     }
 
+    public static VendingMachineActableImpl newInstenceVendingMachineActableImpl() {
+        return new VendingMachineActableImpl();
+    }
+
     public static Person newInstencePerson() {
         return new Person();
     }
