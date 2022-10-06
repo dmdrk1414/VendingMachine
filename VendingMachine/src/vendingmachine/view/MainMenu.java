@@ -1,5 +1,7 @@
 package vendingmachine.view;
 
+import develoferFuc.UI;
+import notuseclass.VendingActionView;
 import vendingmachine.controllor.ObjectManager;
 
 public class MainMenu {
@@ -32,9 +34,9 @@ public class MainMenu {
             }
         }
     }
-
-    public static void main(String[] args) {
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.run();
-    }
+//
+//    public static void main(String[] args) {
+//        MainMenu mainMenu = new MainMenu();
+//        mainMenu.run();
+//    }
 }

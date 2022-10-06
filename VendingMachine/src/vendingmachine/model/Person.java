@@ -1,6 +1,6 @@
 package vendingmachine.model;
 
-import vendingmachine.view.UI;
+import develoferFuc.UI;
 
 public class Person {
 	private int coin;

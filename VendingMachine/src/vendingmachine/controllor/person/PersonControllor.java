@@ -1,9 +1,9 @@
 package vendingmachine.controllor.person;
 
-import vendingmachine.controllor.vendingmachine.VendingMachineActableImpl;
+import develoferFuc.UI;
+import notuseclass.VendingMachineActableImpl;
 import vendingmachine.model.Person;
 import vendingmachine.model.VendingMachine;
-import vendingmachine.view.UI;
 
 public class PersonControllor {
     Person user;

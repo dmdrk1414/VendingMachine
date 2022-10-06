@@ -1,5 +1,6 @@
 package vendingmachine.view;
 
+import develoferFuc.UI;
 import vendingmachine.controllor.inter.InitGetInstance;
 import vendingmachine.controllor.manager.ManagerControllor;
 import vendingmachine.model.Manager;

@@ -1,6 +1,6 @@
 package vendingmachine.model;
 
-import vendingmachine.view.UI;
+import develoferFuc.UI;
 
 public class Drink {
 	final String MSG_NOT_POSITIVE_INT = "Drink.updateInfoDrink";

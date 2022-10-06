@@ -1,6 +1,6 @@
-package vendingmachine.view;
+package notuseclass;
 
-import vendingmachine.controllor.vendingmachine.VendingMachineActableImpl;
+import develoferFuc.UI;
 import vendingmachine.model.Person;
 import vendingmachine.model.VendingMachine;
 

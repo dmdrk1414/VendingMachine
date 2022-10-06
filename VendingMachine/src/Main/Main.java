@@ -1,3 +1,4 @@
+package Main;
 import vendingmachine.view.MainMenu;
 
 public class Main {

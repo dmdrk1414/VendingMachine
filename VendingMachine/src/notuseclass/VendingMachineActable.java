@@ -1,4 +1,4 @@
-package vendingmachine.controllor.inter;
+package notuseclass;
 
 import vendingmachine.model.VendingMachine;
 

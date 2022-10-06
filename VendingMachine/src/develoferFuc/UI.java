@@ -1,4 +1,4 @@
-package vendingmachine.view;
+package develoferFuc;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

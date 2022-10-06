@@ -2,7 +2,7 @@ package vendingmachine.model;
 
 import java.util.ArrayList;
 
-import vendingmachine.view.UI;
+import develoferFuc.UI;
 
 public class VendingMachine {
     final private String PRINT_MENU = "음료수 리스트: ";

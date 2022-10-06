@@ -1,9 +1,9 @@
 package vendingmachine.controllor.manager;
 
-import vendingmachine.controllor.vendingmachine.VendingMachineActableImpl;
+import develoferFuc.UI;
+import notuseclass.VendingMachineActableImpl;
 import vendingmachine.model.Manager;
 import vendingmachine.model.VendingMachine;
-import vendingmachine.view.UI;
 
 // 관리자는 많은 음료수를 가지고 있습니다. 등록, 제거, 업데이트, 
 // 등록 : 가격과 자신의 재고를 넣는다

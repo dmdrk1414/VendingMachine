@@ -1,8 +1,8 @@
 package vendingmachine.controllor.inter;
 
+import notuseclass.VendingMachineActableImpl;
 import vendingmachine.controllor.manager.ManagerControllor;
 import vendingmachine.controllor.person.PersonControllor;
-import vendingmachine.controllor.vendingmachine.VendingMachineActableImpl;
 import vendingmachine.model.Manager;
 import vendingmachine.model.Person;
 import vendingmachine.model.VendingMachine;
