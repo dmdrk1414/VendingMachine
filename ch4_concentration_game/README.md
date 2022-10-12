@@ -7,8 +7,9 @@
 
 class Player
 
-1.  getWordFromUser() : 게임 참가자의 이름 필드와 사용자로부터 단어를 입력받는
-2. checkSuccess() : 끝말잇기의 성공여부와 게임을 계속하는지를 판별하는 메서드
+1.  게임 참가자의 이름 필드
+2.  getWordFromUser() : 사용자로부터 단어를 입력받는
+3.  checkSuccess() : 끝말잇기의 성공여부와 게임을 계속하는지를 판별하는 메서드
 
 ```java
 String word = "아버지";
@@ -36,3 +37,17 @@ char firstChar = word.charAt(0);
 이재문이 졌습니다.
 ```
 
+# 알게 된점 😂
+
+
+
+```
+내가 메서드에 Scanner을 close하면 
+다시 Scanner를 생성해도 이미 System.in은 닫혔기 때문에 에러를 일으킨다.
+```
+
+출처: https://nongue.tistory.com/152 [가자미의 개발이야기:티스토리]
+
+이건 처음안 사실이다. 그래서 메서드에 sc을 매개변수로 보낸다는 사실을 알았다. 
+
+정말 신기하다.
