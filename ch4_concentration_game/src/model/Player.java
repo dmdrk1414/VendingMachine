@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Player {
 //	게임 참가자의 이름 필드와
-	public String name;
+	private String name;
 
 	public Player() {
 	}
@@ -18,8 +18,7 @@ public class Player {
 	}
 
 	// 1. getWordFromUser() : 사용자로부터 단어를 입력받는
-	public String getWordFromUser() {
-		Scanner sc = new Scanner(System.in);
+	public String getWordFromUser(Scanner sc) {
 		String strInput2User = "";
 		while (true) {
 			strInput2User = sc.next();
@@ -63,10 +62,5 @@ public class Player {
 		} catch (Exception e) {
 			return true;
 		}
-	}
-
-	public static void main(String[] args) {
-		Player player = new Player();
-		System.out.println(player.equalTwoChar('지', '가'));
 	}
 }

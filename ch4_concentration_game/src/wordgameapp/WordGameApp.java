@@ -32,7 +32,7 @@ public class WordGameApp {
 			indexPlayersAround = indexPlayers % players.length;
 			Player playerAtNow = players[indexPlayersAround];
 			System.out.print(playerAtNow.getName() + ">>");
-			afterWord = playerAtNow.getWordFromUser();
+			afterWord = playerAtNow.getWordFromUser(sc);
 
 			if (playerAtNow.checkSuccess(preWord, afterWord)) {
 				preWord = afterWord;
