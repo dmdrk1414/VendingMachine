@@ -8,6 +8,17 @@
 
 배운 문법을 사용하여 원하는 기능을 추가하여 여러대의 자판기를 만든는 것이 목표입니다.
 
+```
+저는 MVC패턴을 공부하기 위하여 프로젝트를 시작하였지만
+하다보니 MVCC 패턴이네요. Controllor 가 2개인이유는 이름을 수정하다 보니 되었습니다😂 차후 수정할것 같습니다.
+            Model
+   view             
+                Controllor(ActableImpl)    
+                Controllor(Controllor)
+```
+
+
+
 💡 나중에 스프링을 이용해서 웹사이트의 자판기를 만들어 볼까 생각중입니다.
 
 💡 할인개념, 날짜개념, 동전먹는 기능😂, 로또 (난이도 조절) 한번에 원뿔원 😍
@@ -150,11 +161,41 @@ README파일 [리드미 파일 규칙](https://velog.io/@shin6403/Git-git-%EC%BB
 
 1. addCoinCnt, subtractCoinCnt: 코인의 갯수를 관리한다.
 
+#### 💎Manager 클래스 추가
+
+변수
+
+1. DrinkManagement : Enum의 데이터를 가져와서 map처리함
+
+
+
 ---
 
 **🎈VIEW**
 
-#### UI 클래스 추가
+7. 
+
+
+
+---
+
+**🎈CONTROLLOR**
+
+#### 💎ObjectManager 클래스 추가
+
+#### 💎ManagerActableImpl클래스 추가
+
+#### 💎ManagerControllor클래스 추가
+
+#### 💎PersonActableImpl클래스 추가
+
+#### 💎PersonControllor클래스 추가
+
+---
+
+**🎈develoferFunc** : 계발자가 사용을하는 함수을 모았다.
+
+#### 🚜 UI 클래스 추가
 
 에러확인 메세지
 
@@ -182,11 +223,21 @@ README파일 [리드미 파일 규칙](https://velog.io/@shin6403/Git-git-%EC%BB
 
 
 
-#### MainMenu
+---
+
+**🎈Main**
+
+#### 🚜MainMenu
 
 menu run()을 해주는 메서드
 
-#### VendingActionView
+---
+
+**🎈notuseclass** : 사용하지 않은 클래스 모음(삭제를 하는데 아까워서 모아났습니다.)
+
+사람과 관리자를 클래스 분할을 한후 차후 쓸수있어서 저장을 하였습니다😁
+
+#### 🚜VendingActionView
 
 변수
 
@@ -204,13 +255,7 @@ menu run()을 해주는 메서드
 6. showDrinks2user: menu 6.제품보
 7. chooseDrink2VendingMachine: menu 7.제품선택
 
-
-
----
-
-**🎈CONTROLLOR**
-
-#### VendingMachineActable 인터페이스 추가
+#### 🚜VendingMachineActable 인터페이스 추가
 
 1. inputCoin: 동전을 넣는다.
 2. returnCoin: 잔돈을 반환
@@ -220,7 +265,7 @@ menu run()을 해주는 메서드
 6. showProducts: 메뉴 보기
 7. pickProduct: 메뉴 선택
 
-#### VendingMachineActableImpl 클래스 추가
+#### 🚜VendingMachineActableImpl 클래스 추가
 
 1. inputCoin : 코인 추가
 2. returnCoin : 동전 반환
@@ -229,6 +274,12 @@ menu run()을 해주는 메서드
 5. reviseProduct : 제품 업데이트
 6. showProducts : 제품 보여주기
 7. pickProduct : 제품 선택
+
+---
+
+#### 💎MainMenu
+
+menu run()을 해주는 메서드
 
 ## 😍일기😍
 

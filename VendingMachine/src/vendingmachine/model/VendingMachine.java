@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import develoferFuc.UI;
 
 public class VendingMachine {
-    final private String PRINT_MENU = "음료수 리스트: ";
-
     private static int index;
+
+    final private String PRINT_MENU = "음료수 리스트: ";
     private int amountCoin;
     private ArrayList<Drink> productManagement;
     private String namePickDrink;
