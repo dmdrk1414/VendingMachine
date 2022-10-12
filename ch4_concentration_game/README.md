@@ -36,3 +36,8 @@ char firstChar = word.charAt(0);
 이재문이 졌습니다.
 ```
 
+황기태
+
+이재문
+
+한원선

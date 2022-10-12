@@ -4,24 +4,26 @@ import java.util.Scanner;
 
 public class Player {
 //	게임 참가자의 이름 필드와
-	String name;
+	public String name;
 
 	public Player() {
-
 	}
 
 	public Player(String name) {
 		this.name = name;
 	}
 
-//	1.  getWordFromUser() :  사용자로부터 단어를 입력받는
+	public String getName() {
+		return name;
+	}
+
+	// 1. getWordFromUser() : 사용자로부터 단어를 입력받는
 	public String getWordFromUser() {
 		Scanner sc = new Scanner(System.in);
 		String strInput2User = "";
 		while (true) {
 			strInput2User = sc.next();
 			if (this.strCheck(strInput2User)) {
-				sc.close();
 				return strInput2User;
 			} else {
 				continue;
