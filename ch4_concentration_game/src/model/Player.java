@@ -1,5 +1,6 @@
 package model;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Player {
@@ -21,11 +22,15 @@ public class Player {
 	public String getWordFromUser(Scanner sc) {
 		String strInput2User = "";
 		while (true) {
-			strInput2User = sc.next();
-			if (this.strCheck(strInput2User)) {
-				return strInput2User;
-			} else {
-				continue;
+			try {
+				strInput2User = sc.next();
+				if (this.strCheck(strInput2User)) {
+					return strInput2User;
+				} else {
+					continue;
+				}
+			} catch (InputMismatchException e) {
+				UI.ErrNotRightInput();
 			}
 		}
 	}
@@ -36,18 +41,7 @@ public class Player {
 		char preWordLastChar = preWord.charAt(preWordLastIndex);
 		char afterWordFirstChar = afterWord.charAt(0);
 
-		if (this.equalTwoChar(preWordLastChar, afterWordFirstChar)) {
-			return true;
-		} else {
-			return false;
-		}
-
-	}
-
-	private boolean equalTwoChar(char preWordLastChar, char afterWordFirstChar) {
-		String parseStrPreWordLastChar = String.valueOf(preWordLastChar);
-		String parseStrAfterWordLastChar = String.valueOf(afterWordFirstChar);
-		if (parseStrPreWordLastChar.equals(parseStrAfterWordLastChar)) {
+		if (UI.equalTwoChar(preWordLastChar, afterWordFirstChar)) {
 			return true;
 		} else {
 			return false;
