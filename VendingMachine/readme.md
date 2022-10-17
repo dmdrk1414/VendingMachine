@@ -102,9 +102,9 @@ README파일 [리드미 파일 규칙](https://velog.io/@shin6403/Git-git-%EC%BB
 
 ## 📚 클래스 메서드 추가 설명
 
-**🎈MODEL**
+### **🎈MODEL**
 
-#### VendingMachine 클래스 추가 <br>
+#### VendingMachine 클래스 <br>
 
 지역변수
 
@@ -132,7 +132,7 @@ README파일 [리드미 파일 규칙](https://velog.io/@shin6403/Git-git-%EC%BB
 12.  isNameDrink2VendingMachine:  선택한 Drink의 isNameDrink의 메서드를 콜을 하여 이름이 비어있는지 확인하는 메서드
 13.  isProductManagementValue: 제품 메니저변수에서 값이 있는지 확인하는 메서드, 찾은후 index 반환( 추후 수정할듯. 메니저에서 값이 있는지 확인하는 지? 아직 굳이 필요한지 고민)
 
-#### Drink 클래스 추가
+#### Drink 클래스
 
 변수
 
@@ -151,7 +151,7 @@ README파일 [리드미 파일 규칙](https://velog.io/@shin6403/Git-git-%EC%BB
 7. changeOldName: (new)이름을 떼고 이름을 넣는다
 8. isNewDrink: 새로운 drink인지 확인을 해주는 메서드
 
-#### Person 클래스 추가
+#### Person 클래스
 
 변수
 
@@ -171,91 +171,91 @@ README파일 [리드미 파일 규칙](https://velog.io/@shin6403/Git-git-%EC%BB
 
 ---
 
-**🎈VIEW**
+### **🎈VIEW**
 
-7. 
+💎 MainMenu
 
+💎 ManagerMenuManager
 
-
----
-
-**🎈CONTROLLOR**
-
-#### 💎ObjectManager 클래스 추가
-
-#### 💎ManagerActableImpl클래스 추가
-
-#### 💎ManagerControllor클래스 추가
-
-#### 💎PersonActableImpl클래스 추가
-
-#### 💎PersonControllor클래스 추가
+💎 PersonMenuManager
 
 ---
 
-**🎈develoferFunc** : 계발자가 사용을하는 함수을 모았다.
+### **🎈CONTROLLOR**
 
-#### 🚜 UI 클래스 추가
+#### 💎ObjectManager 클래스
 
-에러확인 메세지
+#### 🚜ManagerActableImpl클래스 
 
-1. ErrPositiveCall: 양수를 입력해주세요.
-2. ErrNotIntegerCall: 
-3. ErrNotPickValue: 찾고자하는 것이 없습니다.
-4. ErrNotPickStock: 재고가 없네요.
-5. ErrNotString: 문자만넣어주세요.
-6. ErrNotFormReturn: 올바른 리턴값이 아닙니다.
-7. ErrOutOfBoundSize : msg: ::0~" + (menuSize - 1) + " 범위의 값만 넣어주세요.
-8. ErrNotStrWord : "msg: " + msg + ":: 단어만 넣어주세요.
-9. tryAgainMsg : 다시입력하세요.
-10. ErrNotRegisterDrink : msg: " + msg + ":: 제품이름이 겹치는 것같아요 확인해주세요.
+#### 🚜ManagerControllor클래스
 
-메서드
+#### 💎PersonActableImpl클래스
 
-1. deleteCompleMsg : 제거 완료했습니다.
-2. returnSelectMenuNum: 선택하는 메뉴의 숫자를 리턴한다.
-3. isMenuSizeBoundary: 메뉴가 총메뉴의 바운더리에서 있는가 
-4. isPositiveNum: 정수인지 확인하는 메서드
-5. isStrCheck: 문자열 체크
-6. getInt: 정수를 얻는 메서드
-7. getStrLine:  한줄의 문자열 입력을 받는 메서드
-8. getStrWord: 단어의 입력을 받는 메서드
-
-
+#### 💎PersonControllor클래스
 
 ---
 
-**🎈Main**
+### **🎈develoferFunc** : 계발자가 사용을하는 함수을 모았다.
 
-#### 🚜MainMenu
+#### 🚜 UI 클래스 
 
-menu run()을 해주는 메서드
+**에러확인 메세지**
+
+1. ErrPositiveCall: [출력] 양수를 입력해주세요.
+2. ErrNotIntegerCall: [출력] 정수를 입력해주세요.
+3. ErrNotPickValue: [출력] 찾고자하는 것이 없습니다.
+4. ErrNotPickStock: [출력] 재고가 없네요.
+5. ErrNotString: [출력] 문자만넣어주세요.
+6. ErrNotFormReturn: [출력] 올바른 리턴값이 아닙니다.
+7. ErrOutOfBoundSize : [출력] 범위의 값만 넣어주세요.
+8. ErrNotStrWord : [출력] 단어만 넣어주세요.
+9. tryAgainMsg : [출력] 다시입력하세요.
+10. ErrNotRegisterDrink : [출력] 제품이름이 겹치는 것같아요 확인해주세요.
+11. deleteCompleMsg : [출력] 제거 완료했습니다.
+
+**메서드**
+
+1. returnSelectMenuNum: 선택하는 메뉴의 숫자를 리턴한다.
+2. isMenuSizeBoundary: 메뉴가 총메뉴의 바운더리에서 있는가 
+3. isPositiveNum: 정수인지 아닌지 확인할 수있다.
+4. isStrCheck: 문자열 체크를 해준다.
+5. getInt: 정수를 얻는 다 (검증 가능)
+6. getStrLine:  한줄의 문자열 입력을 받는 (검증 완료)
+7. getStrWord: 단어의 입력을 받는 메서드 (검증환요)
 
 ---
 
-**🎈notuseclass** : 사용하지 않은 클래스 모음(삭제를 하는데 아까워서 모아났습니다.)
+### **🎈Main**
 
-사람과 관리자를 클래스 분할을 한후 차후 쓸수있어서 저장을 하였습니다😁
+#### 🚜Main 클래스
 
-#### 🚜VendingActionView
+1. MainMenu클래스의  run()을 해주는 메서드
 
-변수
+---
 
-1. user: Person객체의 변수
-2. machine : VendingMachine의 변수
-3. machineAction: VendingMachineActableImpl의 변수
+### **:fire:notuseclass** : 사용하지 않은 클래스 모음(삭제를 하는데 아까워서 모아났습니다.)
 
-메서드
+사람과 관리자를 클래스 분할을  하여 사용이 필요없다는 판단을 하여 삭제를 하였습니다. ~~하지만 차후 쓸수있어서 저장을 하였습니다😁~~
 
-1. putInVendingMachineCoin:  menu 1.동전넣기
-2. returnCoin2VendingMachine: menu 2.동전반환
+#### :fire:VendingActionView 클래스
+
+**변수**
+
+1. user: Person 레퍼런스 변수
+2. machine : VendingMachine 레퍼런스 변수
+3. machineAction: VendingMachineActableImpl 레퍼런스 변수
+
+**메서드**
+
+1. putInVendingMachineCoin:  menu 1. 동전넣기
+2. returnCoin2VendingMachine: menu 2. 동전반환
 3. registerNewDrink: menu 3.제품등록
-4. deleteExistDrink2VendingMachine: menu 4.제품삭제
-5. updateDrinkInfo2VendingMachine: menu 5.제품업데이트
-6. showDrinks2user: menu 6.제품보
-7. chooseDrink2VendingMachine: menu 7.제품선택
+4. deleteExistDrink2VendingMachine: menu 4. 제품삭제
+5. updateDrinkInfo2VendingMachine: menu 5. 제품업데이트
+6. showDrinks2user: menu 6. 제품보기
+7. chooseDrink2VendingMachine: menu 7. 제품선택
 
-#### 🚜VendingMachineActable 인터페이스 추가
+#### :fire:VendingMachineActable 인터페이스
 
 1. inputCoin: 동전을 넣는다.
 2. returnCoin: 잔돈을 반환
@@ -265,7 +265,7 @@ menu run()을 해주는 메서드
 6. showProducts: 메뉴 보기
 7. pickProduct: 메뉴 선택
 
-#### 🚜VendingMachineActableImpl 클래스 추가
+#### :fire:VendingMachineActableImpl 클래스 
 
 1. inputCoin : 코인 추가
 2. returnCoin : 동전 반환
@@ -277,9 +277,7 @@ menu run()을 해주는 메서드
 
 ---
 
-#### 💎MainMenu
 
-menu run()을 해주는 메서드
 
 ## 😍일기😍
 
