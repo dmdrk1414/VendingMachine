@@ -60,7 +60,7 @@ class UI {
 		// 안내 문자 출력
 		System.out.println("Select one Shape  ");
 		// Shape 종류 출력
-		System.out.print("Rectangle:0, Circle:1, Line:2 >> 0");
+		System.out.print("Rectangle:0, Circle:1, Line:2 >> ");
 
 		// 사용자가 선택한 Shape 입력
 		int numShapeSelck = scanner.nextInt();
@@ -80,6 +80,8 @@ class UI {
 		// height 입력
 		width = scanner.nextInt();
 		height = scanner.nextInt();
+
+		scanner.nextLine();
 
 		// 포인트 객체 생성
 		Point point = new Point(width, height);
@@ -236,7 +238,7 @@ class Circle extends Shape {
 	@Override
 	public String toString() {
 		// 화면에 반지름과 중심 좌표 값을 출력, 예) "Circle 5 (20,30)"
-		return ("Rectangle " + radius + " " + center);
+		return ("Circle " + radius + " " + center);
 	}
 
 	public void move(int width, int height) {
@@ -325,10 +327,13 @@ class ShapeList implements LinkedList {
 	// 인터페이스 메소드 구현
 	public void add_front(Object value) {
 
-		// 노드를 생성합니다.
-		// 새로운 노드의 다음 노드로 헤드를 지정합니다.
 		if (isEmpty()) {
-			add_front(value);
+			// 노드를 생성합니다.
+			Node newNode = new Node(value);
+
+			// 새로운 노드의 다음 노드로 헤드를 지정합니다.
+			this.head = newNode;
+			this.tail = newNode;
 		}
 		// 기존에 노드가 있었다면
 		else {
@@ -337,6 +342,9 @@ class ShapeList implements LinkedList {
 
 			// 현재 헤드의 이전 노드로 새로운 노드를 지정
 			this.head.prev = newNode;
+
+			// newNode 의 다음을 현재 헤드로 지정
+			newNode.next = this.head;
 
 			// 헤드로 새로운 노드를 지정
 			this.head = newNode;
@@ -353,13 +361,21 @@ class ShapeList implements LinkedList {
 	// 리스트 맨 뒤에 노드 삽입
 	// 인터페이스 메소드 구현
 	public void add_rear(Object value) {
-		if (isEmpty()) { // 리스트의 노드가 없다면 첫번째 노드를 추가하는 메소드를 사용합니다.
+		if (isEmpty()) {
+			// 리스트의 노드가 없다면 첫번째 노드를 추가하는 메소드를 사용합니다.
 			add_front(value);
 		} else {
-			Node newNode = new Node(value); // 노드를 생성합니다.
-			tail.next = newNode; // tail의 다음 노드로 생성한 노드를 지정합니다.
-			newNode.prev = tail; // 새로운 노드의 이전 노드로 tail을 지정합니다.
-			tail = newNode; // 마지막 노드를 갱신합니다.
+			// 노드를 생성합니다.
+			Node newNode = new Node(value);
+
+			// tail의 다음 노드로 생성한 노드를 지정합니다.
+			tail.next = newNode;
+
+			// 새로운 노드의 이전 노드로 tail을 지정합니다.
+			newNode.prev = tail;
+
+			// 마지막 노드를 갱신합니다.
+			tail = newNode;
 		}
 	}
 
@@ -498,26 +514,24 @@ class GraphicEditor {
 		Shape shape = null; // 임시로 사용할 Shape 레퍼런스 변수 선언
 		boolean bLoop = true; // 반복문 관리용 부울린 변수
 		Point p1;
-		String msgpoint = "Enter two integers to move along the X and Y axes (enter two integers) >> ";
+		String msgpoint = "The two integers to move along the X and Y axes (enter two integers) >> ";
 
 		while (bLoop) {
 			int n = UI.getMainMenu(scanner); // 메뉴 정보 읽어 오기
 			MAIN_MENU menu = MAIN_MENU.values()[n]; // 열겨형의 정보로 변환
 
+			GraphicEditor editor = new GraphicEditor();
 			switch (menu) {
 			case Insert_front: // 리스트 앞에 삽입
 				// 삽입을 위한 객체 생성
-				GraphicEditor editor_1 = new GraphicEditor();
-				shape = editor_1.createShape(scanner);
+				shape = editor.createShape(scanner);
 
 				// 리스트 앞에 삽입
 				list.add_front(shape);
 				break;
 			case Insert_rear: // 리스트 뒤에 삽입
 				// 삽입을 위한 객체 생성
-				GraphicEditor editor_2 = new GraphicEditor();
-				shape = editor_2.createShape(scanner);
-
+				shape = editor.createShape(scanner);
 				// 리스트 뒤에 삽입
 				list.add_rear(shape);
 				break;
@@ -564,7 +578,7 @@ class GraphicEditor {
 					// 좌표이동
 					shape.move(width, height);
 				}
-
+				break;
 			case list_all: // 리스트 정보 출력
 				System.out.print(list.toString());
 				break;
