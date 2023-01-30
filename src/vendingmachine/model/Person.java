@@ -3,6 +3,8 @@ package vendingmachine.model;
 import develoferFuc.UI;
 
 public class Person {
+    final static String COIN_NOT_POSITIVE_NUMBER = "동전의 숫자가 음수입니다.";
+
     private int coin;
 
     public Person() {
@@ -16,6 +18,13 @@ public class Person {
         } else {
             return false;
         }
+    }
+
+    public int getCoinOfPerson() {
+        if (coin >= 0) {
+            return coin;
+        }
+        throw new IllegalArgumentException(COIN_NOT_POSITIVE_NUMBER);
     }
 
     public boolean subtractCoinCnt(int coin2Add) {

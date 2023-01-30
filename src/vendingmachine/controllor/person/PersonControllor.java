@@ -21,6 +21,11 @@ public class PersonControllor {
         this.machineAction = machineAction;
     }
 
+    public void showCoinOfPersonAtNow() {
+        int coinOfUser = user.getCoinOfPerson();
+        System.out.println("현재 손님의 돈:" + coinOfUser);
+    }
+
     public void putInVendingMachineCoin() { // menu 1.동전넣기
         System.out.print("투입할 돈: ");
         int coinGiveUser = UI.getInt();
