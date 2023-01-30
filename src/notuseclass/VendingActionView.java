@@ -44,6 +44,7 @@ public class VendingActionView {
         machineAction.registerProduct(this.machine, nameNewDrink, priceNewDrink, stockNewDrink);
         this.showDrinks2user();
     }
+    
 
     public void deleteExistDrink2VendingMachine() { // menu 4.제품삭제
         System.out.print("제거하고싶은 음료수를 고르세요: ");
