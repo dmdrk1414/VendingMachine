@@ -1,6 +1,7 @@
 package vendingmachine.view;
 
 import develoferFuc.UI;
+import notuseclass.VendingMachineActable;
 import vendingmachine.controllor.inter.InitGetInstance;
 import vendingmachine.controllor.person.PersonControllor;
 import vendingmachine.model.Person;
@@ -21,11 +22,13 @@ public class PersonMenuManager {
     public void run() {
         PersonControllor personControllor = InitGetInstance.newInstencePersonControllor(person, machine,
                 InitGetInstance.newInstenceVendingMachineActableImpl());
+        VendingMachineActable vendingMachinControllor = InitGetInstance.newInstenceVendingMachineActableImpl();
 
         int manuCounter = MENU_COUNTER_NUMBER;
         while (true) {
             System.out.println(Person_PRINT_FIRST);
             personControllor.showCoinOfPersonAtNow();
+            System.out.println("현재 자판기에 남아있는 돈:" + vendingMachinControllor.getAmountCoinOfMachine(machine));
             int selectMenuCount = UI.returnSelectMenuNum(manuCounter, MANU_SELCEK_STRING);
             if (selectMenuCount == 0) { // menu 0.나가기
                 System.out.println("MainMenu로 돌아갑니다.");

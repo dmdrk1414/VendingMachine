@@ -20,6 +20,7 @@ public class Person {
         }
     }
 
+    // TODO: coin >= 0을 UI.isPositiveNum으로 변경
     public int getCoinOfPerson() {
         if (coin >= 0) {
             return coin;

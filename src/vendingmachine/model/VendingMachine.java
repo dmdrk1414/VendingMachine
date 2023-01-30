@@ -1,13 +1,15 @@
 package vendingmachine.model;
 
-import java.util.ArrayList;
-
 import develoferFuc.UI;
+
+import java.util.ArrayList;
 
 public class VendingMachine {
     private static int index;
 
     final private String PRINT_MENU = "음료수 리스트: ";
+    final static String AMOUNTCOIN_NOT_POSITIVE_NUMBER = "자판기에 있는 액수가 음수입니다.";
+
     private int amountCoin;
     private ArrayList<Drink> productManagement;
     private String namePickDrink;
@@ -20,6 +22,13 @@ public class VendingMachine {
 
         this.amountCoin = 0;
         this.namePickDrink = "";
+    }
+
+    public int getAmountCoinOfMachine() {
+        if (UI.isPositiveNum(amountCoin)) {
+            return amountCoin;
+        }
+        throw new IllegalArgumentException(AMOUNTCOIN_NOT_POSITIVE_NUMBER);
     }
 
     public boolean isCoinEmpty() {
@@ -100,6 +109,7 @@ public class VendingMachine {
         }
         System.out.println();
     }
+
 
     public void pickDrinkType(String pickNameDrink) {
         if (!isPickDrinkEmpty(pickNameDrink)) {

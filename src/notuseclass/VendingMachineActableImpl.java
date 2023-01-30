@@ -4,6 +4,11 @@ import vendingmachine.model.VendingMachine;
 
 public class VendingMachineActableImpl implements VendingMachineActable {
     @Override
+    public int getAmountCoinOfMachine(VendingMachine vendingMachine) {
+        return vendingMachine.getAmountCoinOfMachine();
+    }
+
+    @Override
     public void inputCoin(VendingMachine vendingMachine, int CoinCnt) {
         vendingMachine.addCoin2VendingMachine(CoinCnt);
     }

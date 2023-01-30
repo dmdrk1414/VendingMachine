@@ -3,6 +3,8 @@ package notuseclass;
 import vendingmachine.model.VendingMachine;
 
 public interface VendingMachineActable {
+    public int getAmountCoinOfMachine(VendingMachine vendingMachine);
+
     public void inputCoin(VendingMachine vendingMachine, int CoinCnt);
 
     public int returnCoin(VendingMachine vendingMachine);
