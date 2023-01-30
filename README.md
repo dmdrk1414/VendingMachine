@@ -41,6 +41,14 @@
 
 사람을 선택을 하면 가지고 있는 돈의 액수를 표시하도록 해보겠습니다.
 
+변경이전
+
+![image-20230130215523382](C:\Users\seung\AppData\Roaming\Typora\typora-user-images\image-20230130215523382.png)
+
+변경이후
+
+![image-20230130215551020](C:\Users\seung\AppData\Roaming\Typora\typora-user-images\image-20230130215551020.png)
+
 ---
 
 ###### ✨ 2022-10-02 새로운 음료는 (new)의 이름이 붙습니다.
