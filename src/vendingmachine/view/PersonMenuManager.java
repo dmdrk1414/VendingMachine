@@ -27,6 +27,7 @@ public class PersonMenuManager {
         int manuCounter = MENU_COUNTER_NUMBER;
         while (true) {
             System.out.println(Person_PRINT_FIRST);
+            personControllor.showDrinks2user(); // 자판기의 제품보기
             personControllor.showCoinOfPersonAtNow();
             System.out.println("현재 자판기에 남아있는 돈:" + vendingMachinControllor.getAmountCoinOfMachine(machine));
             int selectMenuCount = UI.returnSelectMenuNum(manuCounter, MANU_SELCEK_STRING);
