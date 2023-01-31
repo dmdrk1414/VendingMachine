@@ -110,8 +110,11 @@ public class VendingMachine {
         System.out.println();
     }
 
-
     public void pickDrinkType(String pickNameDrink) {
+        if (!isNameDrink2VendingMachine(pickNameDrink)) {
+            UI.ErrNotPickValue(pickNameDrink);
+            return;
+        }
         if (!isPickDrinkEmpty(pickNameDrink)) {
             this.namePickDrink = pickNameDrink;
         }
