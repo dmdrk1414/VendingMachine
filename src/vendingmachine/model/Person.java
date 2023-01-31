@@ -36,4 +36,11 @@ public class Person {
             return false;
         }
     }
+
+    public boolean isAppropriateRangeOfMoney2User(int inputCoin) {
+        if (coin >= inputCoin) {
+            return true;
+        }
+        return false;
+    }
 }

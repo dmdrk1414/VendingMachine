@@ -29,6 +29,10 @@ public class PersonControllor {
     public void putInVendingMachineCoin() { // menu 1.동전넣기
         System.out.print("투입할 돈: ");
         int coinGiveUser = UI.getInt();
+        if (user.isAppropriateRangeOfMoney2User(coinGiveUser) != true) {
+            System.out.println("입력한 돈의 액수가 가지고있는 액수보다 커요!!");
+            return;
+        }
         if (user.subtractCoinCnt(coinGiveUser)) {
             machineAction.inputCoin(this.machine, coinGiveUser);
             System.out.println(coinGiveUser + "원 자판기에 투입!!");
